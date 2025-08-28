@@ -1,0 +1,30 @@
+ 
+:root {
+	--Primary: #393280; 
+	--Primary-filter : brightness(0) saturate(100%) invert(23%) sepia(9%) saturate(5221%) hue-rotate(210deg) brightness(95%) contrast(99%);
+
+	--Primary-light: #BEC0DC;
+	--Secondary: #EF4D92;
+
+
+	--Primary-Black: #212121;
+	--Dark-Gray: #666666;
+	--Light-Gray: #999999;
+	--Disabled: #B2B2B2;
+	--Sale: #EA1919; 
+
+
+	--border-gray : #DADADA;
+	--border-Dark-Gray : #CFCFCF; 
+	--border-Light-Gray : #EFEFEF;
+	--BG-gray : #E5E5E5;
+	--BG-Dark-Gray : #CFCFCF;
+	--BG-Light-Gray : #F5F5F5;
+	--BG-Navy : #E8ECF6;
+
+	--White : #fff; 
+	--White-filter :brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7500%) hue-rotate(120deg) brightness(105%) contrast(101%)
+
+
+
+} 

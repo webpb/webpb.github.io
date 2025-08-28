@@ -1,0 +1,229 @@
+@charset "utf-8";
+
+/* ******************************************************
+	00. common
+*******************************************************/
+input[type=text],
+input[type=number],
+input[type=email],
+input[type=url],
+input[type=tel],
+input[type=password]{position:relative;display:inline-block;width:100%;height:40px;text-align:left;font-size:15px;line-height:1;color:#666;font-weight:300;padding:0 20px;background-color:#f4f4f4;border-radius:0;border:1px solid #dedede;box-sizing:border-box;transition:background 0.5s, border 0.5s ease;z-index:0;}
+input:-webkit-autofill{-webkit-box-shadow: 0 0 0 40px #efefef inset;-webkit-text-fill-color: #666}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active{transition:background-color 5000s ease-in-out 0s;}
+select{position:relative;-webkit-appearance:none;-moz-appearance:none;appearance:none;display:inline-block;width:100%;height:40px;font-size:15px;line-height:40px;color:#666;font-weight:400;padding:0 35px 0 10px;border-radius:0;background-color:#f4f4f4;border:none;background-image:url(../../images/common/select_arrow.png);background-position:right 10px center;background-repeat:no-repeat;box-sizing:border-box;z-index:0;white-space:normal;word-wrap:normal;word-break:normal}
+select:focus{outline:none}
+select::-ms-expand{display:none}
+textarea{display:inline-block;width:100%;height:160px;font-size:15px;line-height:20px;color:#666;padding:20px;border:none;border-radius:0;background:#efefef;box-sizing:border-box;resize:none}
+
+input[type=text]:focus,
+input[type=number]:focus,
+input[type=email]:focus,
+input[type=url]:focus,
+input[type=tel]:focus,
+input[type=password]:focus,
+textarea:focus,
+input[type=text].active,
+input[type=number].active,
+input[type=email].active,
+input[type=url].active,
+input[type=tel].active,
+input[type=password].active,
+textarea.active {outline:none}
+
+
+label{cursor:pointer}
+::-webkit-input-placeholder{color:#bbb}
+::-moz-placeholder{color:#bbb}
+:-ms-input-placeholder{color:#bbb}
+:-moz-placeholder{color:#bbb}
+input[type=submit]{display:inline-block;border:none;outline:none;background:none;border-radius:0;cursor:pointer}
+button{display:inline-block;border:none;outline:none;background:none;border-radius:0;cursor:pointer}
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px #efefef inset;
+}
+
+/* jquery-ui */
+.ui-datepicker .ui-datepicker-title select {display:inline-block; min-width:0; width:40%; height:30px; padding:5px 10px; margin:0 3px; color:#222; font-size:15px; line-height:1; border:1px solid #ddd; background-color:#fff; background-image:url(../../images/common/select_arrow.png); background-position:right +8px center; background-repeat:no-repeat; vertical-align:middle; -webkit-appearance:inherit; appearance:inherit}
+.ui-datepicker .ui-datepicker-prev,
+.ui-datepicker .ui-datepicker-next {top:4px;}
+.ui-datepicker .ui-datepicker-prev-hover,
+.ui-datepicker .ui-datepicker-next-hover {top:3px;}
+
+.datepicker-input {position:relative; display:inline-block; width:100%; height:48px;}
+.datepicker-input > input {color:#333;font-size:18px;font-weight:700;padding:0 20px;}
+.datepicker-input > img {position:absolute; top:1px; right:1px; width:50px; height:46px; cursor:pointer;border-left:1px solid #ccc;border-radius: 0px 5px 5px 0px;}
+
+
+
+
+
+/* ******************************************************
+	01. form
+*******************************************************/
+.check_wrap > span{display:inline-block;margin-right:13px}
+
+.input_wrap{display:table;width:100%;padding:10px 0;border-top:solid 2px #666;border-bottom:solid 2px #666}
+.input_wrap .input_col{display:table;width:100%}
+.input_wrap .input_col_parent{}
+.input_wrap .input_row{display:table-row}
+.input_wrap .input_title{display:table-cell;width:100px;padding:10px 0 10px 20px;line-height:40px;text-align:left}
+.input_wrap .input_title em{color:#ff7e00}
+.input_wrap .input_content{display:table-cell;width:auto;padding:10px 20px 10px 0;line-height:40px;text-align:left}
+.input_wrap .input_content .check_wrap{padding:10px 0;line-height:20px}
+.input_wrap .input_content input[type='text'],
+.input_wrap .input_content input[type='password'],
+.input_wrap .input_content select{border:none}
+/*.input_wrap .input_content img{vertical-align:middle} */
+.input_wrap .input_content img {position:absolute;right:30px;top:50%;width:20px;margin-top:-10px}
+
+.input_wrap .input_data .input_title,
+.input_wrap .input_data .input_content{line-height:1}
+
+.id_wrap{position:relative}
+/* 2020. 5. 18. 회원가입 form 수정 START */
+.id_wrap .input_cell{width:75%;float:left;box-sizing:border-box}
+.id_wrap .btn_id_check{position:absolute;top:0;right:0;width:24%;color:#888;text-align:center;font-size:888;font-weight:300;line-height:38px;border:solid 1px #c9c9c9; border-radius:5px; }/**cw 200821 수정**/
+/* 2020. 5. 18. 회원가입 form 수정 END */
+/* s: 2019-10-17 수정 및 추가 */
+.id_wrap .duplication_notice{position:absolute;right:20px;top:12px;font-size:12px;line-height:1.5;color:#ef4d92;z-index:10}
+
+.pw_wrap{position:relative}
+.pw_wrap:after{content:"";display:block;clear:both}
+.pw_wrap .input_cell{width:50%;float:left;box-sizing:border-box}
+.pw_wrap .input_cell:last-child{border-left:solid 1px #fff}
+.pw_wrap .duplication_notice01{font-size:12px;line-height:1.5;color:#ef4d92;margin-top:7px}
+.pw_wrap .duplication_notice02{font-size:12px;line-height:1.5;color:#ef4d92;margin-top:7px}
+/* e: 2019-10-17 수정 및 추가 */
+
+.address_wrap > input{margin-top:10px}
+.address_wrap .postcode{position:relative;padding-right:155px}
+.address_wrap .btn_address{position:absolute;top:0;right:0;width:152px;color:#888;text-align:center;font-size:888;font-weight:300;line-height:38px;border:solid 1px #c9c9c9}
+
+.phone_wrap{}
+.phone_wrap .hp_wrap{position:relative;padding-right:165px}
+.phone_wrap:after{content:"";display:block;clear:both}
+.phone_wrap .input_cell{position:relative;width:33.33%;float:left;border-left:solid 1px #fff;box-sizing:border-box}
+.phone_wrap .input_cell:first-child{border-left:none}
+.phone_wrap .check_allow{position:absolute;right:0;top:0;width:145px;padding-left:20px;line-height:40px}
+.phone_wrap .sms_info{clear:both;padding-top:5px;font-size:15px;line-height:22px}
+/* s: 2019-10-17 수정 */
+.phone_wrap .duplication_notice{clear:both;font-size:12px;line-height:1.5;color:#ef4d92;padding-top:7px}
+/* e: 2019-10-17 수정 */
+
+.mail_wrap{position:relative}
+.mail_wrap:after{content:"";display:block;clear:both}
+.mail_wrap .input_cell{width:32%;float:left;border-left:solid 1px #fff;box-sizing:border-box}
+.mail_wrap .input_cell:first-child{border-left:none}
+.mail_wrap .input_cell:nth-child(2){width:36%;position:relative}
+.mail_wrap .input_cell:nth-child(2) input{padding-left:40px}
+.mail_wrap .input_cell:nth-child(2):after{content:"@";position:absolute;left:10px;top:0;width:20px;text-align:center;line-height:40px;z-index:10}
+.mail_wrap .check_allow{clear:both;padding-top:5px;font-size:15px;line-height:22px}
+/* s: 2019-11-11 추가 */
+.mail_wrap .input_cell.n3{width:33.33%;}
+/* e: 2019-11-11 추가 */
+/* s: 2019-10-17 수정 */
+input[name='email'] + .duplication_notice{font-size:12px;line-height:1.5;color:#ef4d92;margin-top:7px}
+/* e: 2019-10-17 수정 */
+
+/* s: 2020-02-03 추가 */
+.card_wrap{}
+.card_wrap .cd_wrap{position:relative;}
+.card_wrap:after{content:"";display:block;clear:both}
+.card_wrap .input_cell{position:relative;width:25%;float:left;border-left:solid 1px #fff;box-sizing:border-box}
+.card_wrap .input_cell:first-child{border-left:none}
+/* e: 2020-02-03 추가 */
+
+.upload_file{position:relative;padding-right:146px}
+.upload_file input[type='file']{position:absolute;left:0;top:0;width:0;height:0;border:none;background:#fff;opacity:0}
+.upload_file input[type='text']{cursor:default}
+.upload_file .btn_attach_file{position:absolute;right:0;top:0;width:146px}
+.upload_file .btn_attach_file a{display:inline-block;height:40px;font-size:15px;font-weight:300;text-align:center;color:#888;line-height:40px;border:solid 1px #c9c9c9;box-sizing:border-box}
+.upload_file .btn_attach_file .btn_file{width:94px;float:left;}
+.upload_file .btn_attach_file .btn_add,
+.upload_file .btn_attach_file .btn_remove{position:relative;width:40px;float:right}
+.upload_file .btn_attach_file .btn_add:before,
+.upload_file .btn_attach_file .btn_add:after,
+.upload_file .btn_attach_file .btn_remove:after{content:"";display:block;position:absolute;left:50%;top:50%;background:#666}
+.upload_file .btn_attach_file .btn_add:before{width:2px;height:16px;margin:-8px 0 0 -1px}
+.upload_file .btn_attach_file .btn_add:after,
+.upload_file .btn_attach_file .btn_remove:after{width:16px;height:2px;margin:-1px 0 0 -8px}
+
+.file_img{margin-top:5px}
+.file_img > span{margin-left:15px}
+.file_img input[type="checkbox"],
+.file_img label{vertical-align:middle}
+.upload_file input[type='file']:focus,
+.upload_file input[type='text']:focus,
+.upload_file input[type='file'].active,
+.upload_file input[type='text'].active{border:none !important}
+
+.expiry_date_wrap{}
+.expiry_date_wrap:after{content:"";display:block;clear:both}
+.expiry_date_wrap .input_cell{width:50%;float:left;box-sizing:border-box}
+.expiry_date_wrap .input_cell:first-child{border-right:solid 1px #fff}
+
+.password_wrap{position:relative;max-width:60px;padding-left:80px;line-height:40px}
+.password_wrap input{position:absolute;left:0;top:0;width:70px}
+
+
+
+/* ******************************************************
+	@ reponsive
+*******************************************************/
+@media screen and (max-width:1660px){
+
+}
+
+
+@media screen and (max-width:1024px){
+
+	/* ******************************************************
+		01. form
+	*******************************************************/
+	.input_wrap{display:block;border-top-width:2px;padding:10px 0;}
+	.input_wrap .input_col{display:block}
+	.input_wrap .input_row{display:block;border:none}
+	.input_wrap .input_title{display:block;width:auto !important;font-weight:400;color:#333;line-height:1;padding:10px 0 0 0;border-left:none;background:none}	
+    .input_wrap .input_content{position:relative;display:block;width:auto;line-height:normal;padding:10px 0;border:none} /** cw 200825 수정 **/  
+}
+
+
+
+@media screen and (max-width:640px){
+	/* ******************************************************
+		00. common
+	*******************************************************/
+	input[type=text],
+	input[type=number],
+	input[type=email],
+	input[type=password]{height:40px;font-size:14px;padding:0 10px}
+	select{height:40px;font-size:14px}
+	textarea{height:80px;font-size:14px;line-height:18px;padding:15px 10px}
+	
+	.id_wrap .duplication_notice{position:static;margin-top:7px}
+	.id_wrap:after{content:"";display:block;clear:both} /** cw 200825 수정 **/
+
+	.pw_wrap{}
+	.pw_wrap:after{content:"";display:block;clear:both}
+	.pw_wrap .input_cell{width:50%;float:left;box-sizing:border-box}
+	.pw_wrap .input_cell:last-child{border-left:solid 1px #fff}
+
+	.address_wrap > input{margin-top:10px}
+	.address_wrap .address_num{position:relative;padding-right:155px}
+	.address_wrap .btn_address{position:absolute;top:0;right:0;width:155px}
+
+	.phone_wrap,
+	.phone_wrap .hp_wrap{padding-right:0}
+	.phone_wrap .check_allow{position:static;width:auto;clear:both;padding:5px 0 0;line-height:22px}
+
+}
+
+
+@media screen and (max-width:420px){
+
+
+}

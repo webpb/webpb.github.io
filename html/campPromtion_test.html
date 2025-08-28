@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>캠페인 프로모션</title>
+  <link rel="stylesheet" href="/common/css/camp-promotion.css" />
+  <style>
+    .cont-wrap {
+      width: 1000px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 767px) {
+      .cont-wrap {
+        width: 100%;
+        padding: 0 20px;
+      }
+    }
+  </style>
+  <style>
+    /* 기본 스타일 초기화 */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Helvetica', 'Arial', sans-serif;
+      color: #fff;
+      background-color: #000;
+    }
+
+    /* 가이드용 섹션 */
+    .section-guide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-size: 2rem;
+      text-align: center;
+    }
+
+    /* 패럴랙스 컨테이너 */
+    .parallax {
+      width: 100%;
+    }
+
+    /* 패럴랙스 각 섹션 */
+    .parallax__section {
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* 텍스트 컨테이너 */
+    .parallax__text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      text-align: center;
+      z-index: 10;
+      pointer-events: none;
+    }
+
+    /* 개별 텍스트 요소 */
+    .parallax__text>div {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      white-space: nowrap;
+    }
+
+    .parallax__text-preface {
+      font-size: 1.5rem;
+    }
+
+    .parallax__text-modifier {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+
+    .parallax__text-title {
+      font-size: 4rem;
+      font-weight: bold;
+    }
+
+    .parallax__text-up {
+      font-size: 2.5rem;
+    }
+
+    .parallax__text-down {
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+
+    /* 비디오 컨테이너 */
+    .parallax__container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* 비디오 - 초기 상태 */
+    .parallax__video {
+      width: 100px;
+      height: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="cont-wrap first">
+    <p style="text-align: center;">
+
+      <!-- 캠페인 프로모션 2025.08.22~ -->
+    <div id="campPromotion" class="promotion">
+      <div class="promotion__inner">
+        <div>top menu</div>
+
+        <div class="section-guide">
+          <p>아래로 스크롤하여<br>애니메이션을 확인하세요.</p>
+        </div>
+
+        <!-- Parallax -->
+        <div class="parallax">
+
+          <!-- Parallax : TVC -->
+          <section class="parallax__section parallax__section--tvc">
+            <div class="parallax__text">
+              <div class="parallax__text-preface">강한 유산균</div>
+              <div class="parallax__text-modifier">강력한</div>
+              <div class="parallax__text-title">선물대전</div>
+            </div>
+            <div class="parallax__container">
+              <video class="parallax__video" loop playsinline muted controls>
+                <source src="https://deepdive22.cafe24.com/wp/mp4/0612_Verish_full_qhd_low.mp4" type="video/mp4">
+              </video>
+            </div>
+          </section>
+
+          <!-- Parallax : USP -->
+          <section class="parallax__section parallax__section--usp">
+            <div class="parallax__text">
+              <div class="parallax__text-up">듀오락의 생존 기술로</div>
+              <div class="parallax__text-down">강력한 장 속 생존력</div>
+            </div>
+            <div class="parallax__container">
+              <video class="parallax__video" loop playsinline muted controls>
+                <source
+                  src="https://video.wixstatic.com/video/5fb736_d7d00914f5cc43a8b82b4af74da32e6f/1080p/mp4/file.mp4"
+                  type="video/mp4">
+              </video>
+            </div>
+          </section>
+
+        </div>
+        <!--// Parallax -->
+
+        <div class="section-guide">
+          <p>애니메이션 종료</p>
+        </div>
+
+        <div>bottom item</div>
+      </div>
+    </div>
+    <!--// 캠페인 프로모션 2025.08.22~ -->
+
+    </p>
+  </div>
+  <!-- GSAP 라이브러리 로드 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      gsap.registerPlugin(ScrollTrigger);
+
+      document.querySelectorAll('.parallax__section').forEach(section => {
+        const video = section.querySelector(".parallax__video");
+
+        const timeline = gsap.timeline({
+          scrollTrigger: {
+            trigger: section,
+            start: "top top",
+            end: "+=100%",
+            scrub: 1,
+            pin: true,
+            onEnter: () => {
+              video.currentTime = 0;
+              video.play();
+            },
+            onLeaveBack: () => {
+              video.pause();
+              video.currentTime = 0;
+            }
+          }
+        });
+
+        // 한 방향으로만 진행되는 애니메이션
+        timeline
+          .fromTo(video,
+            { width: '100px' },
+            { width: '100%', ease: "power1.inOut" }
+          )
+          .fromTo(section.querySelector(".parallax__text-preface"), { y: 0, opacity: 1 }, { y: -200, opacity: 0 }, 0)
+          .fromTo(section.querySelector(".parallax__text-modifier"), { x: 0, opacity: 1 }, { x: -300, opacity: 0 }, 0)
+          .fromTo(section.querySelector(".parallax__text-title"), { y: 0, opacity: 1 }, { y: 200, opacity: 0 }, 0)
+          .fromTo(section.querySelector(".parallax__text-up"), { y: 0, opacity: 1 }, { y: -150, opacity: 0 }, 0)
+          .fromTo(section.querySelector(".parallax__text-down"), { y: 0, opacity: 1 }, { y: 150, opacity: 0 }, 0);
+      });
+    });
+  </script>
+</body>
+
+</html>

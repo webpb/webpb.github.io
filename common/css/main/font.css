@@ -1,0 +1,50 @@
+ 
+
+@font-face {
+	font-family: 'Pretendard Bold';
+	font-weight: 700;
+	font-display: swap;
+	src: local('Pretendard Bold'), url(font/Pretendard-Bold.woff2) format('woff2'), url(font/Pretendard-Bold.woff) format('woff');
+} 
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 400;
+	font-display: swap;
+	src: local('Pretendard Regular'), url(font/Pretendard-Regular.woff2) format('woff2'), url(font/Pretendard-Regular.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard Light';
+	font-weight: 300;
+	font-display: swap;
+	src: local('Pretendard Light'), url(font/Pretendard-Light.woff2) format('woff2'), url(font/Pretendard-Light.woff) format('woff');
+} 
+
+@font-face {
+	font-family: 'Pretendard Bold';
+	font-weight: 700;
+	font-display: swap;
+	src: local('Pretendard Bold'), url(font/Pretendard-Bold.woff2) format('woff2'), url(font/Pretendard-Bold.woff) format('woff');
+} 
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 400;
+	font-display: swap;
+	src: local('Pretendard Regular'), url(font/Pretendard-Regular.woff2) format('woff2'), url(font/Pretendard-Regular.woff) format('woff');
+}
+
+@font-face {
+	font-family: 'DuolacL_W';
+	font-weight: 300;
+	font-display: swap;
+	src: local('DuolacL_W'), url(font/DuolacL_W.woff2) format('woff2'), url(font/DuolacL_W.woff) format('woff');
+} 
+
+@font-face {
+	font-family: 'DuolacM_W';
+	font-weight: 300;
+	font-display: swap;
+	src: local('DuolacM_W'), url(font/DuolacM_W.woff2) format('woff2'), url(font/DuolacM_W.woff) format('woff');
+} 

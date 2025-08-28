@@ -1,0 +1,892 @@
+@charset "UTF-8";
+/******************************
+캠페인 프로모션 페이지
+2025.08.22~
+******************************/
+#campPromotion {
+  width: 650px;
+  margin: 0 auto;
+  background-color: #000;
+  color: #fff;
+}
+@media (max-width: 1100px) {
+  #campPromotion {
+    width: 100%;
+  }
+}
+#campPromotion .promotion__inner {
+  position: relative;
+}
+#campPromotion .promotion__inner .promotion__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 70px 86px 50px 86px;
+  font-family: "NotoSansKR";
+  font-weight: 500;
+}
+@media (max-width: 1100px) {
+  #campPromotion .promotion__inner .promotion__head {
+    padding: 50px 20px 40px;
+  }
+}
+#campPromotion .promotion__inner .promotion__head--left img {
+  width: auto;
+  height: 26px;
+}
+@media (max-width: 1100px) {
+  #campPromotion .promotion__inner .promotion__head--left img {
+    height: 20px;
+  }
+}
+#campPromotion .promotion__inner .promotion__head--mark img {
+  width: auto;
+  height: 63px;
+}
+@media (max-width: 1100px) {
+  #campPromotion .promotion__inner .promotion__head--mark img {
+    height: 50px;
+  }
+}
+#campPromotion .promotion__inner .promotion__head--right img {
+  width: auto;
+  height: 26px;
+}
+@media (max-width: 1100px) {
+  #campPromotion .promotion__inner .promotion__head--right img {
+    height: 20px;
+  }
+}
+#campPromotion .promotion__inner .parallax {
+  width: 100%;
+  margin-bottom: 200px;
+}
+#campPromotion .promotion__inner .parallax__img {
+  width: 100%;
+}
+#campPromotion .promotion__inner .parallax-tvc {
+  position: relative;
+}
+#campPromotion .promotion__inner .parallax-tvc__slogan-top {
+  width: 100%;
+  margin-bottom: 28px;
+  padding: 0 86px;
+}
+@media (max-width: 1100px) {
+  #campPromotion .promotion__inner .parallax-tvc__slogan-top {
+    padding: 0 20px;
+    margin-bottom: 20px;
+  }
+}
+#campPromotion .promotion__inner .parallax-tvc__motion {
+  position: relative;
+}
+#campPromotion .promotion__inner .parallax-tvc__motion--wrap {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: auto;
+  transform-origin: top right;
+  transform: scale(0);
+  z-index: 1;
+}
+#campPromotion .promotion__inner .parallax-tvc__motion--video {
+  width: 100%;
+  height: auto;
+}
+#campPromotion .promotion__inner .parallax-tvc__slogan-middle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 20px;
+  padding: 0 80px;
+}
+@media (max-width: 1100px) {
+  #campPromotion .promotion__inner .parallax-tvc__slogan-middle {
+    padding: 0 20px;
+  }
+}
+#campPromotion .promotion__inner .parallax-tvc__slogan-middle--left {
+  width: 100%;
+}
+#campPromotion .promotion__inner .parallax-tvc__slogan-middle--right {
+  width: 67%;
+}
+#campPromotion .promotion__inner .parallax-tvc__slogan-bottom {
+  width: 100%;
+  margin-top: 28px;
+  padding: 0 86px;
+}
+@media (max-width: 1100px) {
+  #campPromotion .promotion__inner .parallax-tvc__slogan-bottom {
+    margin-top: 20px;
+    padding: 0 20px;
+  }
+}
+#campPromotion .promotion__inner .parallax-tvc__img {
+  width: 100%;
+}
+#campPromotion .promotion__inner .parallax-tvc__info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 135px;
+  padding: 0 86px;
+}
+@media (max-width: 1100px) {
+  #campPromotion .promotion__inner .parallax-tvc__info {
+    margin-top: 50px;
+    padding: 0 20px;
+  }
+}
+#campPromotion .promotion__inner .parallax-tvc__info-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#campPromotion .promotion__inner .parallax-tvc__info-left img {
+  width: auto;
+  height: 34px;
+}
+@media (max-width: 1100px) {
+  #campPromotion .promotion__inner .parallax-tvc__info-left img {
+    height: 25px;
+  }
+}
+#campPromotion .promotion__inner .parallax-tvc__info-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#campPromotion .promotion__inner .parallax-tvc__info-center img {
+  width: auto;
+  height: 36px;
+}
+@media (max-width: 1100px) {
+  #campPromotion .promotion__inner .parallax-tvc__info-center img {
+    height: 27px;
+  }
+}
+#campPromotion .promotion__inner .parallax-tvc__info-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#campPromotion .promotion__inner .parallax-tvc__info-right img {
+  width: auto;
+  height: 38px;
+}
+@media (max-width: 1100px) {
+  #campPromotion .promotion__inner .parallax-tvc__info-right img {
+    height: 28px;
+  }
+}
+#campPromotion .promotion__inner .parallax-txt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "NotoSansKR";
+  font-weight: 500;
+  text-align: center;
+  margin-top: 120px;
+}
+@media (max-width: 1100px) {
+  #campPromotion .promotion__inner .parallax-txt {
+    margin-top: 60px;
+  }
+}
+#campPromotion .promotion__inner .parallax-txt__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#campPromotion .promotion__inner .parallax-txt__inner > div {
+  opacity: 0;
+  transform: translateY(30px);
+}
+#campPromotion .promotion__inner .parallax-txt__slogan-1st {
+  width: 130px;
+  height: auto;
+}
+@media (max-width: 1100px) {
+  #campPromotion .promotion__inner .parallax-txt__slogan-1st {
+    width: 122px;
+  }
+}
+#campPromotion .promotion__inner .parallax-txt__slogan-2nd {
+  width: 244px;
+  height: auto;
+  margin-top: 60px;
+  opacity: 1;
+}
+@media (max-width: 1100px) {
+  #campPromotion .promotion__inner .parallax-txt__slogan-2nd {
+    margin-top: 40px;
+    width: 230px;
+  }
+}
+#campPromotion .promotion__inner .parallax-txt__slogan-3rd {
+  width: 206px;
+  height: auto;
+  margin-top: 66px;
+}
+@media (max-width: 1100px) {
+  #campPromotion .promotion__inner .parallax-txt__slogan-3rd {
+    margin-top: 40px;
+    width: 195;
+  }
+}
+#campPromotion .promotion__inner .parallax-txt__slogan-4th {
+  width: 61 px;
+  height: auto;
+  margin-top: 12px;
+  margin-bottom: 100px;
+}
+@media (max-width: 1100px) {
+  #campPromotion .promotion__inner .parallax-txt__slogan-4th {
+    margin-top: 11px;
+    width: 58px;
+  }
+}
+#campPromotion .promotion__inner .parallax-usp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+#campPromotion .promotion__inner .parallax-usp__slogan-up {
+  width: 299px;
+  margin-bottom: 5px;
+}
+@media (max-width: 1100px) {
+  #campPromotion .promotion__inner .parallax-usp__slogan-up {
+    width: 283px;
+    margin-bottom: 4px;
+  }
+}
+#campPromotion .promotion__inner .parallax-usp__motion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 0;
+}
+#campPromotion .promotion__inner .parallax-usp__motion--wrap {
+  width: 100%;
+  transform: scale(0);
+}
+#campPromotion .promotion__inner .parallax-usp__motion--video {
+  width: 100%;
+}
+#campPromotion .promotion__inner .parallax-usp__slogan-down {
+  width: 302px;
+  margin-top: 5px;
+}
+@media (max-width: 1100px) {
+  #campPromotion .promotion__inner .parallax-usp__slogan-down {
+    width: 286px;
+    margin-top: 4px;
+  }
+}
+#campPromotion .promotion__inner .parallax-usp__info {
+  width: 239px;
+  margin: 79px 0 100px;
+}
+@media (max-width: 1100px) {
+  #campPromotion .promotion__inner .parallax-usp__info {
+    width: 226px;
+    margin-top: 75px;
+  }
+}
+#campPromotion .promotion__inner .anchor-tab {
+  position: sticky;
+  top: 98px;
+  left: 0;
+  width: 100%;
+  z-index: 20;
+  background-color: #000;
+}
+#campPromotion .promotion__inner .anchor-tab__inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+}
+#campPromotion .promotion__inner .anchor-tab__item {
+  width: 100%;
+  border: 1px solid #fff;
+}
+#campPromotion .promotion__inner .anchor-tab__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 10px 0;
+  background-color: #000;
+  font-size: 14px;
+  color: #fff;
+  line-height: 120%;
+}
+#campPromotion .promotion__inner .anchor-tab__link--active {
+  background-color: #af874b;
+  font-weight: bold;
+}
+#campPromotion .promotion__inner .quiz__inner {
+  position: relative;
+}
+#campPromotion .promotion__inner .quiz__head-background {
+  width: 100%;
+}
+#campPromotion .promotion__inner .quiz__head-background img {
+  height: auto;
+}
+@media (max-width: 1100px) {
+  #campPromotion .promotion__inner .quiz__head-background img {
+    height: 757px;
+  }
+}
+#campPromotion .promotion__inner .quiz__wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+}
+@media (max-width: 1100px) {
+  #campPromotion .promotion__inner .quiz__wrap {
+    padding: 0 14px;
+  }
+}
+#campPromotion .promotion__inner .quiz__img {
+  width: 100%;
+  margin-top: 94px;
+  text-align: center;
+}
+@media (max-width: 1100px) {
+  #campPromotion .promotion__inner .quiz__img {
+    margin-top: 80px;
+  }
+}
+#campPromotion .promotion__inner .quiz__background {
+  width: 100%;
+  margin-top: 27px;
+  text-align: center;
+}
+#campPromotion .promotion__inner .quiz__background img {
+  width: 436px;
+  height: 412px;
+}
+#campPromotion .promotion__inner .quiz__question {
+  position: absolute;
+  top: 406px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (max-width: 1100px) {
+  #campPromotion .promotion__inner .quiz__question {
+    top: 280px;
+  }
+}
+#campPromotion .promotion__inner .quiz__question-passage {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #fff;
+  line-height: 120%;
+  text-align: center;
+}
+@media (max-width: 1100px) {
+  #campPromotion .promotion__inner .quiz__question-passage {
+    margin-top: 100px;
+    font-size: 14px;
+    line-height: 120%;
+  }
+}
+#campPromotion .promotion__inner .quiz__question-passage--gap {
+  margin-top: 20px;
+}
+@media (max-width: 1100px) {
+  #campPromotion .promotion__inner .quiz__question-passage--gap {
+    margin-top: 18px;
+  }
+}
+#campPromotion .promotion__inner .quiz__question-blank {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+@media (max-width: 1100px) {
+  #campPromotion .promotion__inner .quiz__question-blank {
+    margin-right: 2px;
+  }
+}
+#campPromotion .promotion__inner .quiz__question-blank img {
+  width: 15px;
+  height: 15px;
+  margin-left: 4px;
+}
+#campPromotion .promotion__inner .quiz__question-ask {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+}
+@media (max-width: 1100px) {
+  #campPromotion .promotion__inner .quiz__question-ask {
+    font-size: 20px;
+    line-height: 120%;
+  }
+}
+#campPromotion .promotion__inner .quiz__question-ask img {
+  width: 22px;
+  height: 22px;
+  margin-left: 4px;
+}
+#campPromotion .promotion__inner .quiz__answer {
+  width: 100%;
+  padding: 0 110px;
+}
+@media (max-width: 1100px) {
+  #campPromotion .promotion__inner .quiz__answer {
+    padding: 0 50px;
+  }
+}
+#campPromotion .promotion__inner .quiz__answer-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+#campPromotion .promotion__inner .quiz__answer-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin-top: 30px;
+}
+#campPromotion .promotion__inner .quiz__answer-item--bold {
+  font-weight: bold;
+}
+#campPromotion .promotion__inner .quiz__answer-item--bold .quiz__answer-options {
+  font-weight: bold;
+}
+#campPromotion .promotion__inner .quiz__answer-item--bold .quiz__answer-options + label {
+  font-weight: bold;
+}
+#campPromotion .promotion__inner .quiz__answer-options {
+  display: none;
+}
+#campPromotion .promotion__inner .quiz__answer-options + label {
+  display: block;
+  padding-left: 22px;
+  background: url("/images/campaign/camp25_quiz_radio_off.svg") no-repeat left center/14px 14px;
+  font-size: 18px;
+}
+#campPromotion .promotion__inner .quiz__answer-options:checked + label {
+  background-image: url("/images/campaign/camp25_quiz_radio_on.svg");
+}
+#campPromotion .promotion__inner .quiz__answer-bottom {
+  width: 100%;
+  margin-top: 30px;
+  text-align: center;
+}
+#campPromotion .promotion__inner .quiz__answer-bottom--btn {
+  width: 100%;
+  width: 330px;
+  height: 48px;
+  background-color: #000;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+}
+@keyframes balloonFloat {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+#campPromotion .promotion__inner .coupon__inner {
+  position: relative;
+}
+@media (max-width: 1100px) {
+  #campPromotion .promotion__inner .coupon__inner {
+    margin-bottom: 65px;
+  }
+}
+#campPromotion .promotion__inner .coupon__wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+}
+#campPromotion .promotion__inner .coupon__img {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#campPromotion .promotion__inner .coupon__img--head {
+  width: 205px;
+  height: auto;
+  margin-top: 113px;
+}
+#campPromotion .promotion__inner .coupon__img--body {
+  width: 390px;
+  height: auto;
+  margin-top: 28px;
+}
+#campPromotion .promotion__inner .coupon__down-1st {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 21px;
+}
+#campPromotion .promotion__inner .coupon__down-1st .coupon__down-background {
+  width: 390px;
+  height: auto;
+}
+#campPromotion .promotion__inner .coupon__down-2nd {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 22px;
+}
+#campPromotion .promotion__inner .coupon__down-2nd .coupon__down-background {
+  width: 390px;
+  height: auto;
+}
+#campPromotion .promotion__inner .coupon__balloon {
+  position: absolute;
+  top: 71px;
+  left: 0;
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+@media (max-width: 1100px) {
+  #campPromotion .promotion__inner .coupon__balloon {
+    top: 100px;
+  }
+}
+#campPromotion .promotion__inner .coupon__balloon-inner {
+  display: inline-block;
+  width: 327px;
+  height: auto;
+  animation: balloonFloat 1s ease-in-out infinite;
+  will-change: transform;
+}
+#campPromotion .promotion__inner .coupon__down-btn {
+  text-align: center;
+}
+#campPromotion .promotion__inner .coupon__down-btn--1st {
+  position: absolute;
+  top: 234px;
+  left: 0;
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+@media (max-width: 1100px) {
+  #campPromotion .promotion__inner .coupon__down-btn--1st {
+    top: 254px;
+  }
+}
+#campPromotion .promotion__inner .coupon__down-btn--1st a {
+  display: inline-block;
+  height: auto;
+}
+@media (max-width: 1100px) {
+  #campPromotion .promotion__inner .coupon__down-btn--1st a {
+    width: 312px;
+  }
+}
+#campPromotion .promotion__inner .coupon__down-btn--2nd {
+  position: absolute;
+  top: 181px;
+  left: 0;
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+@media (max-width: 1100px) {
+  #campPromotion .promotion__inner .coupon__down-btn--2nd {
+    top: 197px;
+  }
+}
+#campPromotion .promotion__inner .coupon__down-btn--2nd a {
+  display: inline-block;
+  height: auto;
+}
+@media (max-width: 1100px) {
+  #campPromotion .promotion__inner .coupon__down-btn--2nd a {
+    width: 312px;
+  }
+}
+#campPromotion .promotion__inner .special-price__inner {
+  text-align: center;
+}
+#campPromotion .promotion__inner .special-price__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#campPromotion .promotion__inner .special-price__content--2box {
+  background: #f8f3e6;
+  padding: 108px 0 70px 0;
+}
+@media (max-width: 1100px) {
+  #campPromotion .promotion__inner .special-price__content--2box {
+    padding-bottom: 55px;
+  }
+}
+#campPromotion .promotion__inner .special-price__content--2box .special-price__head {
+  width: 290px;
+}
+#campPromotion .promotion__inner .special-price__content--4box {
+  background: #c29b61;
+  padding: 92px 0 58px 0;
+}
+@media (max-width: 1100px) {
+  #campPromotion .promotion__inner .special-price__content--4box {
+    padding-bottom: 54px;
+  }
+}
+#campPromotion .promotion__inner .special-price__content--4box .special-price__head {
+  width: 333px;
+}
+#campPromotion .promotion__inner .special-price__content--half {
+  background: #f8f3e6;
+  padding: 88px 0 68px 0;
+}
+#campPromotion .promotion__inner .special-price__content--half .special-price__head {
+  width: 226px;
+}
+#campPromotion .promotion__inner .special-price__content--gift {
+  background: #f8f3e6;
+  padding: 68px 0 74px 0;
+}
+#campPromotion .promotion__inner .special-price__content--gift .special-price__head {
+  width: 302px;
+}
+#campPromotion .promotion__inner .special-price__content--gift .special-price__list {
+  margin-top: 47px;
+}
+#campPromotion .promotion__inner .special-price__content--gift .special-price__list > ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 0;
+}
+#campPromotion .promotion__inner .special-price__content--gift .special-price__list > ul li {
+  width: 50%;
+}
+#campPromotion .promotion__inner .special-price__list {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+#campPromotion .promotion__inner .special-price__list > ul > li {
+  width: 356px;
+}
+#campPromotion .promotion__inner .special-price__present {
+  position: relative;
+}
+#campPromotion .promotion__inner .special-price__present--wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding-top: 110px;
+}
+#campPromotion .promotion__inner .special-price__present--wrap img {
+  width: 356px;
+  margin-top: 15px;
+}
+#campPromotion .promotion__inner .special-price__present--head-img {
+  width: 312px;
+  margin-bottom: 17px;
+}
+#campPromotion .promotion__inner .special-price__present--foot-img {
+  width: 215px !important;
+}
+#campPromotion .promotion__inner .giveaway__inner {
+  position: relative;
+}
+#campPromotion .promotion__inner .giveaway__wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding-top: 86px;
+}
+#campPromotion .promotion__inner .giveaway__wrap img {
+  width: 356px;
+}
+#campPromotion .promotion__inner .giveaway__head-img {
+  width: 339px;
+  margin-bottom: 23px;
+}
+#campPromotion .promotion__inner .giveaway__foot-img {
+  width: 194px !important;
+  margin-top: 25px;
+}
+#campPromotion .promotion__inner .notice {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 39px 15px 45px;
+  background-color: #212121;
+}
+#campPromotion .promotion__inner .notice h2 {
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+}
+#campPromotion .promotion__inner .notice__list {
+  margin-top: 10px;
+}
+#campPromotion .promotion__inner .notice__list > li {
+  position: relative;
+  padding: 0 0 4px 8px;
+  font-size: 10px;
+  line-height: 140%;
+}
+#campPromotion .promotion__inner .notice__list > li::before {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+#campPromotion .promotion__popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  width: 318px;
+  height: 204px;
+  z-index: 1000;
+}
+#campPromotion .promotion__popup--dim {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 999;
+}
+#campPromotion .promotion__popup--wrap {
+  width: 318px;
+  height: 204px;
+  background-color: #fff;
+}
+#campPromotion .promotion__popup--container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 0 12px 22px 12px;
+}
+#campPromotion .promotion__popup--content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+#campPromotion .promotion__popup--content .popup__head {
+  display: inline-block;
+  margin-bottom: 22px;
+  padding: 4px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #000;
+}
+#campPromotion .promotion__popup--content .popup__body {
+  font-size: 18px;
+  font-weight: bold;
+  color: #000;
+  line-height: 140%;
+}
+#campPromotion .promotion__popup--content .popup__body--em {
+  font-size: 18px;
+  font-weight: bold;
+  color: #AF874A;
+}
+#campPromotion .promotion__popup--content .popup__body--disc {
+  margin-top: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  font-weight: bold;
+  color: #AF874A;
+}
+#campPromotion .promotion__popup--btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 35px;
+  gap: 5px;
+}
+#campPromotion .promotion__popup--btn button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+#campPromotion .promotion__popup--btn button.popup__cancel {
+  border: 1px solid #000;
+  font-size: 14px;
+  color: #000;
+}
+#campPromotion .promotion__popup--btn button.popup__ok {
+  background-color: #000;
+  color: #fff;
+}/*# sourceMappingURL=backup.css.map */

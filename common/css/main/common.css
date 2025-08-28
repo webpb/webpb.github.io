@@ -1,0 +1,32 @@
+@charset "utf-8"; 
+
+/*
+	CSS order:
+	1. clear/display/position/z-index/overflow/float
+	2. width/height
+	3. margin/padding
+	4. color/font/line-height/text/letter-spacing/vertical-align/white-spacing/word-spacing
+	5. etc
+	6. border/background
+
+ */
+
+html{font-size:62.5%;} /* rem 기준 폰트 사이즈 */
+body{position:relative;min-height:100%;line-height:1.1;color:var(--Primary-Black);font-family:Pretendard;}
+*{word-break:break-word;font-size:1.4rem;font-family:Pretendard;}
+
+/*  Media Query */
+
+/* iPhone */
+@media only screen and (min-width:320px) {
+	html{font-size:62.5%;} 
+}
+
+/* Tablet 이상 */
+@media only screen and (min-width:768px) {
+	html{font-size:62.5%;}/* 임의 조정 */
+}
+
+
+
+ 

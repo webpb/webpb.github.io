@@ -1,0 +1,632 @@
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="viewport" content="initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0, user-scalable=no">
+  <title></title>
+  <link rel="shortcut icon" type="image/x-icon" href="/images/common/favi_W.ico">
+  <link rel="icon" href="/images/common/favi_W.ico">
+  <link rel="stylesheet" type="text/css" href="/common/css/base.css?ver=20220830_1" media="all">
+  <link rel="stylesheet" type="text/css" href="/common/css/product.css?ver=20220830_1" media="all">
+  <link rel="stylesheet" type="text/css" href="/common/css/mobile_bot.css" media="all">
+  <script src="//fin.rainbownine.net/js/across_adn_2.0.1.js" type="text/javascript"></script>
+  <script type="text/javascript" src="/common/js/jquery.js"></script>
+  <script type="text/javascript" src="/common/js/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="/common/js/jquery.bxslider.min.js"></script>
+  <script src="/common/js/common.js"></script>
+  <script src="/common/js/scripts.js?ver=2024"></script>
+  <script src="/common/js/swiper.min.js"></script>
+  <script type="text/javascript" src="/common/js/jquery.rwdImageMaps.min.js"></script>
+  <script type="text/javascript" src="/common/js/imagesloaded.pkgd.min.js"></script>
+  <script type="text/javascript" src="/js/cmmn.js"></script>
+  <script type="text/javascript" src="/js/goods.js"></script>
+  <script type="text/javascript" src="/js/cordova_loader/cordova_loader.js"></script>
+  <script type="text/javascript" src="/js/ckeditor-4.10.0/ckeditor.js"></script>
+  <link rel="stylesheet" type="text/css" href="/common/css/main/base.css" media="all">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <!DOCTYPE html>
+  <html lang="ko">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Scrolling Campaign</title>
+
+    <style>
+      /* NotoSansKR 폰트 import */
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500;900&display=swap');
+
+      body {
+        margin: 0;
+        font-family: "NotoSansKR", sans-serif;
+      }
+
+      .duo-content {
+        width: 120rem !important;
+      }
+
+      @media (max-width: 1100px) {
+        .duo-content {
+          width: 100% !important;
+        }
+      }
+
+      #campPromotion {
+        width: 1200px;
+        margin: 0 auto;
+        background-color: #000;
+        color: #fff;
+        overflow: hidden;
+      }
+
+      @media (max-width: 1100px) {
+        #campPromotion {
+          width: 100%;
+        }
+      }
+
+      #campPromotion .promotion__inner .promotion__head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 130px;
+        padding: 0 60px;
+        font-family: "NotoSansKR";
+        font-weight: 500;
+      }
+
+      #campPromotion .promotion__inner .promotion__head--left-text {
+        font-weight: 500;
+        font-size: 32px;
+        color: #fff;
+        text-align: left;
+      }
+
+      #campPromotion .promotion__inner .promotion__head--logo {
+        width: 400px;
+        height: 120px;
+      }
+
+      #campPromotion .promotion__inner .promotion__head--right-text {
+        font-size: 32px;
+        color: #fff;
+        text-align: right;
+      }
+
+      #campPromotion .promotion__inner .parallax {
+        width: 100%;
+      }
+
+      #campPromotion .promotion__inner .parallax__img {
+        width: 100%;
+      }
+
+      #campPromotion .promotion__inner .parallax-tvc {
+        position: relative;
+        min-height: 100vh;
+        padding-top: 130px !important;
+        /* pin을 위해 최소 높이 확보 */
+      }
+
+      #campPromotion .promotion__inner .parallax-tvc__slogan-top {
+        width: 100%;
+        margin-bottom: 60px;
+        padding: 0 60px;
+      }
+
+      #campPromotion .promotion__inner .parallax-tvc__motion {
+        position: relative;
+        /* 자식 요소의 absolute 기준점 */
+      }
+
+      #campPromotion .promotion__inner .parallax-tvc__motion--wrap {
+        /* 우측 상단 기준 애니메이션을 위한 설정 */
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        /* 너비는 100%로 고정하고 scale로 크기 조절 */
+        height: auto;
+        transform-origin: top right;
+        /* 변형의 기준점을 우측 상단으로 설정 */
+        transform: scale(0);
+        /* 초기 상태는 보이지 않게 축소 */
+        z-index: 1;
+      }
+
+      #campPromotion .promotion__inner .parallax-tvc__motion--video {
+        width: 100%;
+        height: auto;
+        /* 비율 유지를 위해 auto로 설정 */
+      }
+
+      #campPromotion .promotion__inner .parallax-tvc__slogan-middle {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        gap: 38px;
+        padding: 0 60px;
+      }
+
+      #campPromotion .promotion__inner .parallax-tvc__slogan-middle--left {
+        width: 100%;
+      }
+
+      #campPromotion .promotion__inner .parallax-tvc__slogan-middle--right {
+        width: 67%;
+      }
+
+      #campPromotion .promotion__inner .parallax-tvc__slogan-bottom {
+        width: 100%;
+        margin-top: 60px;
+        padding: 0 60px;
+      }
+
+      #campPromotion .promotion__inner .parallax-tvc__info {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 125px;
+        padding: 0 60px;
+      }
+
+      #campPromotion .promotion__inner .parallax-tvc__info-left,
+      #campPromotion .promotion__inner .parallax-tvc__info-center,
+      #campPromotion .promotion__inner .parallax-tvc__info-right {
+        font-size: 36px;
+        color: #af874b;
+        line-height: 140%;
+      }
+
+      #campPromotion .promotion__inner .parallax-txt {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        font-family: "NotoSansKR";
+        font-weight: 500;
+        text-align: center;
+      }
+
+      #campPromotion .promotion__inner .parallax-txt__inner>div {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      #campPromotion .promotion__inner .parallax-txt__slogan-1st {
+        font-size: 58px;
+        color: #fff;
+      }
+
+      #campPromotion .promotion__inner .parallax-txt__slogan-2nd {
+        margin-top: 20%;
+        font-size: 58px;
+        color: #fff;
+      }
+
+      #campPromotion .promotion__inner .parallax-txt__slogan-2nd em {
+        font-size: 74px;
+        vertical-align: baseline;
+      }
+
+      #campPromotion .promotion__inner .parallax-txt__slogan-3rd {
+        margin-top: 20%;
+        font-size: 58px;
+        color: #fff;
+      }
+
+      #campPromotion .promotion__inner .parallax-tvc__slogan-3rd em {
+        display: inline-block;
+        margin-top: 20px;
+        font-size: 98px;
+        font-weight: 900;
+        color: #af874b;
+      }
+
+      #campPromotion .promotion__inner .parallax-txt__slogan-4th {
+        margin-top: 20px;
+        font-size: 98px;
+        font-weight: 900;
+        color: #af874b;
+      }
+
+      #campPromotion .promotion__inner .parallax-usp {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        text-align: center;
+        overflow: hidden;
+        padding-top: 260px;
+      }
+
+      #campPromotion .promotion__inner .parallax-usp__slogan-up {
+        margin-bottom: 20px;
+      }
+
+      #campPromotion .promotion__inner .parallax-usp__motion {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 0;
+        /* 요청하신 초기 높이값 9px 설정 */
+      }
+
+      #campPromotion .promotion__inner .parallax-usp__motion--wrap {
+        width: 100%;
+        transform: scale(0);
+        /* 초기 상태는 중앙에서 축소 */
+      }
+
+      #campPromotion .promotion__inner .parallax-usp__motion--video {
+        width: 100%;
+      }
+
+      #campPromotion .promotion__inner .parallax-usp__slogan-down {
+        margin-top: 20px;
+      }
+
+      #campPromotion .promotion__inner .parallax-usp__info {
+        margin-top: 20%;
+        font-size: 68px;
+      }
+    </style>
+
+  </head>
+
+<body>
+  <!-- wrap -->
+  <div id="wiz_wrap" class="duo-wrap main renew2025 show">
+    <!-- header -->
+    <header class="duo-header">
+      <div class="header">
+        <div class="header_inner">
+          <h1 class="logo" onclick="location.href='/'"
+            style="background: url(/images/duolac_logo.png) no-repeat 50% 50%;">
+            DUOLAC</h1>
+          <ul class="gnb-link">
+            <li class="sitemap_btn">
+              카테고리
+            </li>
+            <li class=""><a href="#n">베스트</a></li>
+            <li class=""><a href="#n">브랜드</a></li>
+            <li class=""><a href="#n">이벤트</a></li>
+            <li class=""><a href="#n">체험팩</a></li>
+            <li class=""><a href="#n">건강정보</a></li>
+            <li class=""><a href="#n">고객센터</a></li>
+            <li class=""><a href="#n">멤버십</a></li>
+          </ul>
+          <div class="r-btn-wrap">
+            <button class="btn-cart" onclick="location.href='/cart/cartView.do'"><span
+                style="display: none">장바구니</span></button>
+
+            <span class="search-wrap">
+              <input type="text" name="searchPc" id="searchPc">
+              <button class="btn-search" onclick="javascript:searchIconClick();"><span
+                  style="display: none">검색</span></button>
+            </span>
+          </div>
+        </div>
+
+      </div>
+    </header>
+    <header class="duo-header mobiles">
+      <div class="header">
+        <h1 class="logo" onclick="location.href='/'"
+          style="background: url(/images/duolac_logo.png) no-repeat 50% 50%;">
+          DUOLAC</h1>
+
+        <div class="r-btn-wrap">
+          <button class="btn-cart" onclick="location.href='/cart/cartView.do'"><span
+              style="display: none">장바구니</span></button>
+
+          <span class="search-wrap">
+            <input type="text" name="search" id="search">
+            <button class="btn-search" onclick="javascript:searchIconClick();"><span
+                style="display: none">검색</span></button>
+          </span>
+        </div>
+      </div>
+      <div class="t-menu-wrap">
+        <ul>
+          <li>
+            <a href="/new/brand.do?menu=duolac">
+              <span class="img"
+                style="background-image: url(https://www.duolac.co.kr/img/dp/main/PHS_20250813134250_1323662156.png)"></span>
+              듀오락
+            </a>
+          </li>
+
+          <li>
+            <a href="/gd/prdBestList.do">
+              <span class="img"
+                style="background-image: url(https://www.duolac.co.kr/img/dp/main/PHS_20250813134250_1958690216.png)"></span>
+              베스트
+            </a>
+          </li>
+
+          <li>
+            <a href="/bd/eventListInit.do">
+              <span class="img"
+                style="background-image: url(https://www.duolac.co.kr/img/dp/main/PHS_20250813134251_2011593190.png)"></span>
+              이벤트
+            </a>
+          </li>
+
+          <li>
+            <a href="/exPack.do">
+              <span class="img"
+                style="background-image: url(https://www.duolac.co.kr/img/dp/main/PHS_20250813134251_1898861762.png)"></span>
+              체험팩
+            </a>
+          </li>
+
+        </ul>
+      </div>
+    </header>
+    <!-- //header -->
+
+
+
+    <div class="duo-content">
+      <div id="campPromotion" class="promotion">
+        <div class="promotion__inner">
+          <!-- head -->
+          <div class="promotion__head">
+            <h2 class="promotion__head--left-text">2025<br>Campaign</h2>
+            <div class="promotion__head--logo"><img src="/images/campaign/camp25_logo.png" alt="로고"></div>
+            <div class="promotion__head--right-text">with<br>Son Suk Ku</div>
+          </div>
+          <!--// head -->
+
+          <!-- Parallax -->
+          <div class="parallax">
+            <!-- Parallax : TVC -->
+            <section class="parallax-tvc">
+              <div class="parallax-tvc__slogan-top">
+                <img src="/images/campaign/camp25_TVC_bigText01.png" class="parallax__img" alt="강한 유산균">
+              </div>
+              <div class="parallax-tvc__motion">
+                <div class="parallax-tvc__motion--wrap">
+                  <video class="parallax-tvc__motion--video" playsinline muted>
+                    <source src="https://deepdive22.cafe24.com/wp/mp4/0612_Verish_full_qhd_low.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+              <div class="parallax-tvc__slogan-middle">
+                <div class="parallax-tvc__slogan-middle--left">
+                  <img src="/images/campaign/camp25_TVC_bigText02.png" class="parallax__img" alt="강력한">
+                </div>
+                <div class="parallax-tvc__slogan-middle--right">
+                  <img src="/images/campaign/camp25_TVC_sonimg01.png" class="parallax__img" alt="손석구">
+                </div>
+              </div>
+              <div class="parallax-tvc__slogan-bottom">
+                <img src="/images/campaign/camp25_TVC_bigText03.png" class="parallax__img" alt="선물대전">
+              </div>
+              <div class="parallax-tvc__info">
+                <div class="parallax-tvc__info-left">09.09 -<br>09.29</div>
+                <div class="parallax-tvc__info-center">매일 오전 10시<br>선착순 쿠폰 221명</div>
+                <div class="parallax-tvc__info-right">유산균 하나만 사도<br>리모와 캐리어가?</div>
+              </div>
+            </section>
+            <!--// Parallax : TVC -->
+
+            <!-- Parallax : TXT -->
+            <section class="parallax-txt">
+              <div class="parallax-txt__inner">
+                <div class="parallax-txt__slogan-1st">유산균 보장 균수?</div>
+                <div class="parallax-txt__slogan-2nd"><em>입 속</em>에<br>넣기 전까지 살아서 보장되는 균수</div>
+                <div class="parallax-txt__slogan-3rd">하지만,<br>유산균이 보장되어야 할 곳은</div>
+                <div class="parallax-txt__slogan-4th">장 속</div>
+              </div>
+            </section>
+            <!--// Parallax : TXT -->
+
+            <!-- Parallax : USP -->
+            <section class="parallax-usp">
+              <div class="parallax-usp__slogan-up">
+                <img src="/images/campaign/camp25_USP_bigText01.png" class="parallax__img" alt="듀오락의 생존 기술로">
+              </div>
+              <div class="parallax-usp__motion">
+                <div class="parallax-usp__motion--wrap">
+                  <video class="parallax-usp__motion--video" playsinline muted loop>
+                    <source
+                      src="https://video.wixstatic.com/video/5fb736_d7d00914f5cc43a8b82b4af74da32e6f/1080p/mp4/file.mp4"
+                      type="video/mp4">
+                  </video>
+                </div>
+              </div>
+              <div class="parallax-usp__slogan-down">
+                <img src="/images/campaign/camp25_USP_bigText02.png" class="parallax__img" alt="강력한 장 속 생존력">
+              </div>
+              <div class="parallax-usp__info">강한 유산균을 경험해보세요.</div>
+            </section>
+          </div>
+          <!--// Parallax -->
+
+          <div style="height: 500px; display: flex; align-items: center; justify-content: center;">bottom item</div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <script>
+      gsap.registerPlugin(ScrollTrigger);
+
+      // --- section parallax-tvc ---
+      const tvcVideo = document.querySelector(".parallax-tvc__motion--video");
+      tvcVideo.loop = false;
+      tvcVideo.controls = true;
+
+      const tvcTimeline = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".parallax-tvc",
+          pin: true,
+          start: "top top",
+          end: "+=150%",
+          scrub: 1,
+          onEnter: () => tvcVideo.play(),
+          onLeaveBack: () => {
+            tvcVideo.pause();
+            tvcVideo.currentTime = 0;
+          },
+        }
+      });
+
+      tvcTimeline.to(".parallax-tvc__motion--wrap", {
+        scale: 1,
+      });
+
+
+      // --- section parallax-txt ---
+      const txtTimeline = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".parallax-txt",
+          pin: true,
+          start: "top top",
+          end: "+=150%",
+          scrub: true,
+        }
+      });
+
+      txtTimeline
+        .to(".parallax-txt__slogan-1st", { opacity: 1, y: 0, duration: 1 })
+        .to(".parallax-txt__slogan-2nd", { opacity: 1, y: 0, duration: 1.5 }, "+=0.5")
+        .to(".parallax-txt__slogan-3rd", { opacity: 1, y: 0, duration: 1.5 }, "+=0.5")
+        .to(".parallax-txt__slogan-4th", { opacity: 1, y: 0, duration: 2.5 }, "+=1");
+
+
+      // --- section parallax-usp ---
+      const uspVideo = document.querySelector(".parallax-usp__motion--video");
+      uspVideo.loop = false;
+      uspVideo.controls = true;
+
+      const uspTimeline = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".parallax-usp",
+          pin: true,
+          start: "top top",
+          end: "+=150%",
+          scrub: 1,
+          onEnter: () => {
+            uspVideo.loop = true;
+            uspVideo.play();
+          },
+          onLeaveBack: () => {
+            uspVideo.pause();
+            uspVideo.currentTime = 0;
+          },
+        }
+      });
+
+      // slogan-up/down을 위아래로 벌어지게 하고, video wrap을 동시에 확대
+      uspTimeline
+        .to(".parallax-usp__slogan-up", { y: -340 }, 0)
+        .to(".parallax-usp__slogan-down", { y: 340 }, 0)
+        .to(".parallax-usp__info", { y: 150 }, 0)
+        .to(".parallax-usp__motion--wrap", { scale: 1 }, 0);
+
+    </script>
+
+
+
+
+    <section class="copyright">
+      <div class="copyright_inner">
+        <div class="account-info">
+          <div class="copy_in_info_wrap">
+            <div class="copy_in_info">
+              <strong>입금계좌 정보</strong>
+              <dl>
+                <dt>(주)쎌바이오텍인터내셔날</dt>
+
+                <dd>신한은행 140-007-363942</dd>
+
+                <dd>국민은행 695001-01-162988</dd>
+              </dl>
+            </div>
+            <div class="escro_icon_wrap">
+              <div class="escro_icon escro_icon_pc">
+                <img alt="" src="/images/main/img-foot-03.png" />
+                <p>
+                  <strong>구매안전 에스크로 서비스 가입 확인</strong>
+                  <span>듀오락몰은 안전거래를 위해 현금등으로 결제 시 쇼핑몰에서
+                    가입한 구매안전서비스를 이용하실 수 있습니다.</span>
+                </p>
+              </div>
+              <img alt="" src="/images/main/img-foot-01.png" class="foot-img-1" />
+            </div>
+          </div>
+        </div>
+        <div class="foot-link-wrap">
+          <div class="link">
+            <a href="/termsInit.do?termsTpCd=CMN07010">이용약관</a>
+            <a href="/termsInit.do?termsTpCd=CMN07020">개인정보취급방침</a>
+            <a href="#"
+              onclick="window.open('https://www.ftc.go.kr/bizCommPop.do?wrkr_no=2208152116', '_system'); return false;">사업자정보확인</a>
+            <a href="/genuineInit.do">정품인증안내 </a>
+          </div>
+        </div>
+        <div class="foot-info-1">
+          <img alt="" src="/images/main/img-foot-02.png" class="f-img" />
+          <div class="copy_base_info">
+            <ul class="foot-info-flex">
+              <li>
+                <span>(주)쎌바이오텍인터내셔날 본사 : 경기 김포시 월곶면 애기봉로
+                  409번길 50
+                </span>
+              </li>
+              <li>
+                <span>대표자 : 정명준 / 개인정보관리책임자 : 이진용</span>
+              </li>
+              <li><span>사업자등록번호 : 220-81-52116</span></li>
+              <li>
+                <span>통신판매업신고 : 제 2012-경기김포-0298호 건강식품군</span>
+              </li>
+              <li><span>이메일 : duolacshop@cellbiotech.com</span></li>
+              <li><span>고객센터/제품상담 : 080-668-6108</span></li>
+              <!-- 영업신고 : 김포 제684호  -->
+            </ul>
+            <div class="sns_qna">
+              <button onclick="location.href='https://talk.naver.com/WC2QL9';">
+                <img src="/images/img_2022/footer_btn_naver.jpg" alt="네이버문의" />
+              </button>
+              <button onclick="location.href='https://pf.kakao.com/_sxanxhu/chat';">
+                <img src="/images/img_2022/footer_btn_kakao.jpg" alt="카카오톡 문의" />
+              </button>
+            </div>
+          </div>
+          <p class="copy_ments">
+            <span>본 사이트에 표시된 각종 도안 및 문구 등은 국내외 특허 및
+              디자인, 상표법에 의해 보호받고 있습니다. 따라서 이를 당사의
+              허락없이 사용, 배포, 게시 할 경우 민,형사 상의 책임을 질수
+              있습니다.</span><span>CopyrightⓒCellbiotech CO.,LTD ALL Rights Reserved</span>
+          </p>
+          <div class="escro_icon escro_icon_mob">
+            <img alt="" src="/images/main/img-foot-03.png" />
+            <p>
+              <strong>구매안전 에스크로 서비스 가입 확인</strong>
+              <span>듀오락몰은 안전거래를 위해 현금등으로 결제 시 쇼핑몰에서
+                가입한 구매안전서비스를 이용하실 수 있습니다.</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <p id="btn_top_scroll" class="btn_page_top" style="bottom: 115px !important; display: block">
+      <a href="javascript:scollTopStart();"><img src="/images/common/btn_scroll_top.svg" alt="" width="44" /></a>
+    </p>
+  </div>
+</body>
+
+</html>

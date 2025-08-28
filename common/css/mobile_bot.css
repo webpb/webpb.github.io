@@ -1,0 +1,75 @@
+
+@media screen and (max-width:2800px){	#bottom_menu{:display:none; 	}}
+@media screen and (min-width:768px){	#bottom_menu{display:none; 	}} 
+#bottom_menu {z-index:199; position:fixed; bottom:0; width:100%; }/** cw 200825 수정 **/
+#mobileMenu {float:left; width:100%; background-color:#6267a1; border-top:1px solid var(--Primary) }
+#mobileMenu li {width:calc(25% - 1px);  float:left; height:60px; }
+#mobileMenu li a {width:100%; height:60px; text-indent:-1000em; display:block; background-size: 80% 80%}
+#mobileMenu  li:nth-child(1) a{background: url(../../images/mobilemenu/mobileMenu01.svg?ver=14) no-repeat top  center;  border-right:1px solid #787cab;  }
+#mobileMenu  li:nth-child(2) a{background: url(../../images/mobilemenu/mobileMenu02.svg?ver=14) no-repeat top  center;  border-right:1px solid #787cab; }/** cw 200909 수정 **/
+#mobileMenu  li:nth-child(3) a{background: url(../../images/mobilemenu/mobileMenu03.svg?ver=14) no-repeat top center; border-right:1px solid #787cab; }/** cw 200902 수정 **/
+#mobileMenu  li:nth-child(4) a{background: url(../../images/mobilemenu/mobileMenu04.svg?ver=14) no-repeat top  center;}
+#mobileMenu  li a:focus { background-color:var(--Primary); }
+
+#buyBox {
+	background-color: #f7f7f7;
+    border-top: 1px solid #aaa;
+    display: flex;
+    width: 100%;
+    padding: 0.5rem;
+}
+#buyBox .buyBtn {float:left; width:calc(100%); height:40px;  border-radius:5px;text-align:center;     padding-top:9px;}
+
+#cartBox { display:none; letter-spacing:-.5px;}
+#cartBox .closeBtn {width:100%; float:left; display:block; text-indent:-10000em; background:url(../../images/mobilemenu/icon_delete2.svg) no-repeat; height:26px;  width:100%; background-position:center top; }
+#cartBox .popBox {float:left; width:100%;  background-color:#f7f7f7; border-top:1px solid #999;  }
+#cartBox .popBox .sectProduct {float:left; width:100%; padding:10px 10px 5px;   }
+#cartBox .popBox .sectProduct .ctTit {float:left; width:100%; font-size:19px; font-family: 'NotoSansKR'; color:#333; font-weight: 500;  margin-bottom:10px; line-height:22px; }
+#cartBox .popBox .sectProduct .ctPrice {float:left; width:100%; font-size:22px; font-family:'Montserrat','NotoSansKR', 'Arial', 'dotum'; color:#333; font-weight:600; }
+#cartBox .popBox .sectProduct .ctPrice span { font-size:12px; font-family: 'NotoSansKR'; color:#888; position:relative; top:5px; margin-left:3px; font-weight:400; }
+
+#cartBox .popBox .sectCounter {float:left; width:100%; padding:5px;  }
+#cartBox .popBox .sectCounter .ctQuantity {float:left; position:relative; top:10px; left:5px;   font-size:14px; font-family: 'NotoSansKR'; color:#333; margin-right:20px; font-weight:500; }
+#cartBox .popBox .sectCounter .counter {float:left; }
+#cartBox .popBox .sectCounter .counter .qtBox {width:50px; height:40px;  border:1px solid #d0d0d0; background-color:#fff; }
+#cartBox .popBox .sectCounter .counter .countBtn  { text-indent:-1000em; border:1px solid #d0d0d0; background-color:#fff; display:inline-block; width:40px; height:40px; }
+#cartBox .popBox .sectCounter .counter .minus {border-right:none; background-image:url(../../images/mobilemenu/icon_minus1.svg); }
+#cartBox .popBox .sectCounter .counter .plus {border-left:none; background-image:url(../../images/mobilemenu/icon_plus1.svg); }
+
+
+#cartBox .popBox .optionBox {float:left; width:100%; padding:0 10px; margin-bottom:5px;  }
+#cartBox .popBox .optionBox select {width:calc(100% - 20px); background-color:#ffffff; height:40px; border:1px solid #d0d0d0; }
+#cartBox .popBox .optionSelected {float:left; width: calc(100% - 20px); margin-left:10px;   background-color:#ededed; padding:10px; margin-bottom:5px; }
+#cartBox .popBox .optionSelected .selectTit {font-size:15px; color:#555;  font-family: 'NotoSansKR'; font-weight:500; margin-bottom:10px; line-height:15px;  }
+
+#cartBox .popBox .optionSelected .counter {float:left; width:50%; }
+#cartBox .popBox .optionSelected .counter .qtBox {width:40px; height:30px;  border:1px solid #d0d0d0; background-color:#fff; }
+
+#cartBox .popBox .optionSelected .countBtn  { text-indent:-1000em; border:1px solid #d0d0d0; background-color:#fff; display:inline-block; width:30px; height:30px; }
+#cartBox .popBox .optionSelected .minus {border-right:none; background-image:url(../../images/mobilemenu/icon_minus2.svg); }
+#cartBox .popBox .optionSelected .plus {border-left:none;  background-image:url(../../images/mobilemenu/icon_plus2.svg); }
+#cartBox .popBox .optionSelected .delete {background-image:url(../../images/mobilemenu/icon_delete.svg);  margin-left:10px; border-radius:50%; }
+
+#cartBox .popBox .optionSelected .selectAmount {float:left; width:50%; text-align:right; font-size:17px; position:relative;   }
+#cartBox .popBox .optionSelected .selectAmount .ctPrice {position:absolute; ; right:35px; top:5px; color:#222; font-weight:500; }
+#cartBox .popBox .optionSelected .selectAmount .ctPrice .won {font-size:12px; position:relative; top:4px; margin-left:3px;  color:#333; font-weight:400; }
+
+
+#cartBox .popBox .totalAmount {float:left; width:100%;  text-align:right;  padding:0 10px; height:45px;  }
+#cartBox .popBox .totalAmount .boxIn {float:left; width:100%; border-top:1px solid #ddd; padding-top:10px; position:relative;   }
+
+#cartBox .popBox .totalAmount .boxIn .tit{position:absolute; left:5px; top:14px; font-family: 'NotoSansKR'; font-weight:600;  font-size:14px; color:#333; }
+#cartBox .popBox .totalAmount .boxIn .num {color:#fd7106; font-size:20px;font-family:'Montserrat'; font-weight:600;  }
+#cartBox .popBox .totalAmount .boxIn  .num span.won {color:#333;  font-size:14px;font-family: 'NotoSansKR'; font-weight:400;  position:relative; top:3px; margin-left:3px; }
+#cartBox .popBox .btnArea {border-top:1px solid #aaa; display: flex;width: 100%;padding: 0.5rem;}
+#cartBox .popBox .btnArea .cartBtn {flex: 1;height:40px; border-radius:5px; text-align:center;     padding-top:9px; ; }
+#cartBox .popBox .btnArea .cartBtn:first-child {margin-right:6px; }
+
+.bxsize { box-sizing:border-box; }
+
+.btnBlue {font-weight: 400; font-size:16px; font-family: 'NotoSansKR'; color:#fff !important;  border:1px solid var(--Primary); background-color:var(--Primary);  }
+.btnWhite {font-weight: 500; font-size:16px; font-family: 'NotoSansKR';  color:var(--Primary) !important; border:1px solid var(--Primary); background-color:#fff; }
+
+body.open #buyBox {display:none;}
+body.open #cartBox {display:block; }
+}
