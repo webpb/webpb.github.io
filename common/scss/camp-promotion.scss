@@ -787,7 +787,11 @@
           }
 
           .special-price__head {
-            width: 333px;
+            padding: 0 10px;
+
+            @include mobile {
+              padding: 0 20px;
+            }
           }
         }
 
