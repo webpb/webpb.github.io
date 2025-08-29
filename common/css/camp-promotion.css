@@ -668,23 +668,28 @@
 }
 #campPromotion .promotion__inner .special-price__content--2box {
   background: #f8f3e6;
-  padding: 108px 0 70px 0;
+  padding: 108px 147px 70px;
 }
 @media (max-width: 1100px) {
   #campPromotion .promotion__inner .special-price__content--2box {
-    padding-bottom: 55px;
+    padding: 76px 17px 55px;
   }
 }
 #campPromotion .promotion__inner .special-price__content--2box .special-price__head {
-  width: 290px;
+  padding: 0 22px;
+}
+@media (max-width: 1100px) {
+  #campPromotion .promotion__inner .special-price__content--2box .special-price__head {
+    padding: 0 40px;
+  }
 }
 #campPromotion .promotion__inner .special-price__content--4box {
   background: #c29b61;
-  padding: 92px 0 58px 0;
+  padding: 92px 147px 58px;
 }
 @media (max-width: 1100px) {
   #campPromotion .promotion__inner .special-price__content--4box {
-    padding-bottom: 54px;
+    padding: 81px 17px 54px;
   }
 }
 #campPromotion .promotion__inner .special-price__content--4box .special-price__head {
@@ -692,17 +697,37 @@
 }
 #campPromotion .promotion__inner .special-price__content--half {
   background: #f8f3e6;
-  padding: 88px 0 68px 0;
+  padding: 88px 147px 68px;
+}
+@media (max-width: 1100px) {
+  #campPromotion .promotion__inner .special-price__content--half {
+    padding: 76px 17px 35px;
+  }
 }
 #campPromotion .promotion__inner .special-price__content--half .special-price__head {
-  width: 226px;
+  padding: 0 65px;
+}
+@media (max-width: 1100px) {
+  #campPromotion .promotion__inner .special-price__content--half .special-price__head {
+    padding: 0 70px;
+  }
 }
 #campPromotion .promotion__inner .special-price__content--gift {
   background: #f8f3e6;
   padding: 68px 0 74px 0;
 }
+@media (max-width: 1100px) {
+  #campPromotion .promotion__inner .special-price__content--gift {
+    padding: 35px 0 70px 0;
+  }
+}
 #campPromotion .promotion__inner .special-price__content--gift .special-price__head {
-  width: 302px;
+  padding: 0 175px;
+}
+@media (max-width: 1100px) {
+  #campPromotion .promotion__inner .special-price__content--gift .special-price__head {
+    padding: 0 52px;
+  }
 }
 #campPromotion .promotion__inner .special-price__content--gift .special-price__list {
   margin-top: 47px;
@@ -718,13 +743,20 @@
 #campPromotion .promotion__inner .special-price__content--gift .special-price__list > ul li {
   width: 50%;
 }
+#campPromotion .promotion__inner .special-price__content--gift .special-price__list > ul li img {
+  width: 100%;
+}
 #campPromotion .promotion__inner .special-price__list {
   display: flex;
   justify-content: center;
   margin-top: 30px;
 }
 #campPromotion .promotion__inner .special-price__list > ul > li {
-  width: 356px;
+  width: 100%;
+}
+#campPromotion .promotion__inner .special-price__list > ul > li a {
+  display: block;
+  width: 100%;
 }
 #campPromotion .promotion__inner .special-price__present {
   position: relative;

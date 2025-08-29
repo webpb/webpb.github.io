@@ -763,23 +763,27 @@
 
         &--2box {
           background: #f8f3e6;
-          padding: 108px 0 70px 0;
+          padding: 108px 147px 70px;
 
           @include mobile {
-            padding-bottom: 55px;
+            padding: 76px 17px 55px;
           }
 
           .special-price__head {
-            width: 290px;
+            padding: 0 22px;
+
+            @include mobile {
+              padding: 0 40px;
+            }
           }
         }
 
         &--4box {
           background: #c29b61;
-          padding: 92px 0 58px 0;
+          padding: 92px 147px 58px;
 
           @include mobile {
-            padding-bottom: 54px;
+            padding: 81px 17px 54px;
           }
 
           .special-price__head {
@@ -789,10 +793,18 @@
 
         &--half {
           background: #f8f3e6;
-          padding: 88px 0 68px 0;
+          padding: 88px 147px 68px;
+
+          @include mobile {
+            padding: 76px 17px 35px;
+          }
 
           .special-price__head {
-            width: 226px;
+            padding: 0 65px;
+
+            @include mobile {
+              padding: 0 70px;
+            }
           }
         }
 
@@ -800,8 +812,16 @@
           background: #f8f3e6;
           padding: 68px 0 74px 0;
 
+          @include mobile {
+            padding: 35px 0 70px 0;
+          }
+
           .special-price__head {
-            width: 302px;
+            padding: 0 175px;
+
+            @include mobile {
+              padding: 0 52px;
+            }
           }
 
           .special-price__list {
@@ -817,6 +837,10 @@
 
               li {
                 width: 50%;
+
+                img {
+                  width: 100%;
+                }
               }
             }
           }
@@ -829,7 +853,12 @@
         margin-top: 30px;
 
         >ul>li {
-          width: 356px;
+          width: 100%;
+
+          a {
+            display: block;
+            width: 100%;
+          }
         }
       }
 
