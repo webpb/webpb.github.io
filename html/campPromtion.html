@@ -228,6 +228,41 @@
           <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
           <script>
+            // Anchor Tab Navigation
+            $(document).ready(function () {
+              // Smooth scroll to target with 140px offset
+              $('.anchor-tab__link').on('click', function (e) {
+                e.preventDefault();
+                const targetId = $(this).attr('href');
+                const targetOffset = $(targetId).offset().top - 140;
+
+                $('html, body').animate({
+                  scrollTop: targetOffset
+                }, 500);
+
+                // Update active class
+                $('.anchor-tab__link').removeClass('anchor-tab__link--active');
+                $(this).addClass('anchor-tab__link--active');
+              });
+
+              // Update active tab on scroll
+              $(window).on('scroll', function () {
+                const scrollPosition = $(this).scrollTop() + 140;
+
+                $('section[id]').each(function () {
+                  const currentSection = $(this);
+                  const sectionTop = currentSection.offset().top;
+                  const sectionHeight = currentSection.outerHeight();
+                  const sectionId = currentSection.attr('id');
+
+                  if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                    $('.anchor-tab__link').removeClass('anchor-tab__link--active');
+                    $(`.anchor-tab__link[href="#${sectionId}"]`).addClass('anchor-tab__link--active');
+                  }
+                });
+              });
+            });
+
             gsap.registerPlugin(ScrollTrigger);
 
             // --- section parallax-tvc parallax-txt ---
@@ -378,7 +413,7 @@
 
                 if (activeHref) {
                   $('.anchor-tab__link').removeClass('anchor-tab__link--active');
-                  $(`.anchor-tab__link[href="${activeHref}"]`).addClass('anchor-tab__link--active');
+                  $('.anchor-tab__link[href="' + activeHref + '"]').addClass('anchor-tab__link--active');
                 }
               });
 
@@ -391,7 +426,7 @@
                   isAnimating = true;
                   $('html, body').animate({ scrollTop: pos }, 500, function () {
                     $('.anchor-tab__link').removeClass('anchor-tab__link--active');
-                    $(`.anchor-tab__link[href="${targetId}"]`).addClass('anchor-tab__link--active');
+                    $('.anchor-tab__link[href="' + targetId + '"]').addClass('anchor-tab__link--active');
                     isAnimating = false;
                   });
                 }
@@ -842,8 +877,8 @@
         </script>
         <!--// 레이어 팝업 스크립트 -->
 
-        <!--// 캠페인 프로모션 2025.08.22~ -->
       </div>
+      <!--// 캠페인 프로모션 2025.08.22~ -->
 
 
 

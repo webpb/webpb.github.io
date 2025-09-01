@@ -348,7 +348,7 @@
 }
 #campPromotion .promotion__inner .quiz__wrap {
   width: 100%;
-  padding: 94 107px 67px;
+  padding: 94px 107px 67px;
   background: radial-gradient(circle at 50% -40%, #544124, transparent 70%), radial-gradient(circle at 50% 140%, #544124, transparent 70%);
 }
 @media (max-width: 1100px) {
@@ -894,6 +894,9 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 999;
+}
+#campPromotion .promotion__popup--inner {
+  height: 100%;
 }
 #campPromotion .promotion__popup--wrap {
   width: 318px;
