@@ -1230,6 +1230,9 @@
 
     &__inner {
       position: relative;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
 
     }
 
@@ -1330,7 +1333,8 @@
     &__single {
       overflow-y: auto;
       scrollbar-gutter: auto;
-      max-height: calc(100% - 80px);
+      box-sizing: border-box;
+      height: calc(100vh - 80px);
 
       .review-popup-swiper {
         position: relative;
