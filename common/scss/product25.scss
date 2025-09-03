@@ -1129,6 +1129,7 @@
             -webkit-box-orient: vertical;
             white-space: nowrap;
             word-wrap: break-word;
+            max-height: calc(20px * 2);
           }
 
           .review-list__reply {
@@ -1154,6 +1155,7 @@
         padding-right: 80px;
         font-size: 16px;
         color: $grey2-color;
+        line-height: 20px;
 
         @include mobile {
           font-size: 14px;
