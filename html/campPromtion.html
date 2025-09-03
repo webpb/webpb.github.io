@@ -227,6 +227,7 @@
           <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
           <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
+          <!-- 20250903 : 스크립트 수정 -->
           <script>
             // Anchor Tab Navigation
             $(document).ready(function () {
@@ -270,25 +271,33 @@
             tvcVideo.loop = false;
             tvcVideo.controls = true;
 
+            gsap.set(".parallax-tvc__motion--wrap", {
+              scale: 0,
+              x: "-20px",
+              transformOrigin: "top right" // 스케일의 기준점을 우측 상단으로 설정
+            });
+
             const masterTimeline = gsap.timeline({
               scrollTrigger: {
                 trigger: ".parallax__1st",
-                pin: true,
+                //pin: true,
                 start: "top top",
-                end: "+=80%",
-                scrub: 1,
+                end: "+=100%",
+                //scrub: 1,
                 onEnter: () => tvcVideo.play(),
                 onLeaveBack: () => {
-                  tvcVideo.pause();
-                  tvcVideo.currentTime = 0;
+                  //tvcVideo.pause();
+                  //tvcVideo.currentTime = 0;
                 },
               }
             });
 
             masterTimeline.to(".parallax-tvc__motion--wrap", {
               scale: 1,
-              // ease: "power2.inOut",
-              duration: 2.5
+              ease: "power2.inOut",
+              duration: 1,
+              x: 0,
+              y: 0,
             }, 0);
 
             if (window.matchMedia("(max-width: 1100px)").matches) {
@@ -305,10 +314,10 @@
 
 
             masterTimeline
-              .to(".parallax-txt__slogan-1st", { opacity: 1, y: 0, duration: 1 }, 0.5)
-              .to(".parallax-txt__slogan-2nd", { opacity: 1, y: 0, duration: 1.5 }, "+=0.5")
-              .to(".parallax-txt__slogan-3rd", { opacity: 1, y: 0, duration: 1.5 }, "+=0.5")
-              .to(".parallax-txt__slogan-4th", { opacity: 1, y: 0, duration: 2.5 }, "+=1");
+              .to(".parallax-txt__slogan-1st", { opacity: 1, y: 0, duration: 0.5 }, 0)
+              .to(".parallax-txt__slogan-2nd", { opacity: 1, y: 0, duration: 0.5 }, "+=0.1")
+              .to(".parallax-txt__slogan-3rd", { opacity: 1, y: 0, duration: 0.5 }, "+=0.1")
+              .to(".parallax-txt__slogan-4th", { opacity: 1, y: 0, duration: 1 }, "+=0.1");
 
 
 
@@ -320,10 +329,10 @@
             const uspTimeline = gsap.timeline({
               scrollTrigger: {
                 trigger: ".parallax-usp",
-                pin: true,
-                start: "top 40%",
-                end: "+=80%",
-                scrub: 0.2,
+                // pin: true,
+                start: "top 60%",
+                end: "+=30%",
+                scrub: 1,
                 onEnter: () => {
                   uspVideo.loop = true;
                   uspVideo.play();
@@ -334,23 +343,56 @@
                 },
               }
             });
-            if (window.matchMedia("(max-width: 1100px)").matches) {
-              // Mobile
-              uspTimeline
-                .to(".parallax-usp__slogan-up", { y: -130, ease: "power2.inOut" }, 0)
-                .to(".parallax-usp__slogan-down", { y: 130, ease: "power2.inOut" }, 0)
-                .to(".parallax-usp__info", { y: 130, ease: "power2.inOut" }, 0)
-                .to(".parallax-usp__motion--wrap", { scale: 1, ease: "power2.inOut" }, 0);
-            } else {
-              // Desktop
-              uspTimeline
-                .to(".parallax-usp__slogan-up", { y: -200, ease: "power2.inOut" }, 0)
-                .to(".parallax-usp__slogan-down", { y: 195, ease: "power2.inOut" }, 0)
-                .to(".parallax-usp__info", { y: 200, ease: "power2.inOut" }, 0)
-                .to(".parallax-usp__motion--wrap", { scale: 1, ease: "power2.inOut" }, 0);
-            }
+            gsap.set(".parallax-usp__motion--wrap", { scale: 0.9, height: "0", transformOrigin: "top center" });
+
+            const uspMotionWrap = document.querySelector(".parallax-usp__motion--wrap");
+            let originalWidth = 0;
+            let originalHeight = 0;
+            let aspectRatio = 0;
+
+            window.addEventListener('load', () => {
+
+              const tempHeight = uspMotionWrap.style.height;
+              const tempDisplay = uspMotionWrap.style.display;
+              uspMotionWrap.style.height = 'auto';
+              uspMotionWrap.style.display = 'block';
+
+              originalWidth = uspMotionWrap.offsetWidth;
+              originalHeight = uspMotionWrap.offsetHeight;
+              aspectRatio = originalHeight / originalWidth;
+
+              uspMotionWrap.style.height = tempHeight;
+              uspMotionWrap.style.display = tempDisplay;
+
+              if (window.matchMedia("(max-width: 1100px)").matches) {
+                // Mobile
+                uspTimeline
+                  //.to(".parallax-usp__slogan-up", { y: -130, ease: "power2.inOut" }, 0)
+                  //.to(".parallax-usp__slogan-down", { y: 130, ease: "power2.inOut" }, 0)
+                  //.to(".parallax-usp__info", { y: 130, ease: "power2.inOut" }, 0)
+                  .to(".parallax-usp__motion--wrap", {
+                    scale: 1,
+                    height: originalWidth * aspectRatio,
+                    ease: "power2.inOut",
+                    duration: 0.5
+                  }, 0);
+              } else {
+                // Desktop
+                uspTimeline
+                  //.to(".parallax-usp__slogan-up", { y: -200, ease: "power2.inOut" }, 0)
+                  //.to(".parallax-usp__slogan-down", { y: 195, ease: "power2.inOut" }, 0)
+                  //.to(".parallax-usp__info", { y: 200, ease: "power2.inOut" }, 0)
+                  .to(".parallax-usp__motion--wrap", {
+                    scale: 1,
+                    height: originalWidth * aspectRatio,
+                    ease: "power2.inOut",
+                    duration: 0.5
+                  }, 0);
+              }
+            });
 
           </script>
+          <!--// 20250903 : 스크립트 수정 -->
           <!--// Parallax Script -->
 
           <!-- 앵커메뉴 -->
