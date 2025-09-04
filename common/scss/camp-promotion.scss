@@ -70,10 +70,6 @@
       width: 100%;
       margin-bottom: 100px;
 
-      .pin-spacer {
-        // height: auto !important;
-      }
-
       &__img {
         width: 100%;
       }
@@ -217,9 +213,10 @@
         font-family: 'NotoSansKR';
         font-weight: 500;
         text-align: center;
-        margin-top: 120px;
+        height: 100vh !important;
 
         @include mobile {
+          height: 100vh !important;
           margin-top: 0;
         }
 
@@ -286,6 +283,11 @@
         flex-direction: column;
         align-items: center;
         text-align: center;
+        height: 60%;
+
+        @include mobile {
+          height: 60%;
+        }
 
         &__slogan-up {
           width: 100%;
@@ -342,6 +344,7 @@
         &__info {
           width: 239px;
           margin-top: 79px;
+          opacity: 0;
 
           @include mobile {
             width: 226px;
