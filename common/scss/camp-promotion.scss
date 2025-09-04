@@ -198,7 +198,7 @@
               height: 38px;
 
               @include mobile {
-                height: 28px;
+                height: 28.14px;
               }
             }
           }
@@ -260,12 +260,12 @@
 
           @include mobile {
             margin-top: 57px;
-            width: 195;
+            width: 195px;
           }
         }
 
         &__slogan-4th {
-          width: 61 px;
+          width: 61px;
           height: auto;
           margin-top: 12px;
           margin-bottom: 100px;
@@ -413,7 +413,7 @@
           radial-gradient(circle at 50% 140%, #544124, transparent 70%);
 
         @include mobile {
-          padding: 80 14px 43px;
+          padding: 80px 14px 43px;
         }
       }
 
@@ -665,7 +665,8 @@
       &__num {
         img {
           display: inline-block;
-          width: 12px;
+          width: 15.5px;
+          height: auto;
         }
       }
 
@@ -1193,7 +1194,6 @@
         &--disc {
           margin-top: 5px;
           font-size: 14px;
-          font-weight: bold;
           font-weight: bold;
           color: #AF874A;
         }

@@ -1,4 +1,4 @@
-@import "var", "mixin";
+@import "var.scss", "mixin.scss";
 
 /******************************
 제품상세페이지 리뉴얼
@@ -92,7 +92,7 @@
       padding-top: 20px;
 
       @include mobile {
-        padding: 8px 20px 0 20px;
+        padding: 16px 20px 0 20px;
       }
 
       .buyinfo-top {
@@ -127,7 +127,7 @@
       }
 
       .buyinfo-name {
-        margin-top: 12px;
+        margin-top: 8px;
         font-size: 22px;
         font-weight: bold;
         color: $primary-color;
@@ -193,16 +193,13 @@
         padding-bottom: 20px;
         border-bottom: $grey2-color 1px solid;
 
-        @include mobile {
-          font-size: 35px;
-        }
-
         &__inner {
           display: flex;
           justify-content: space-between;
+          margin-top: 10px;
 
           &:first-child {
-            margin-bottom: 10px;
+            margin-top: 0;
           }
 
           span {
@@ -211,7 +208,7 @@
             padding-left: 28px;
             height: 24px;
             background: url("/images/common/icon_coupon.svg") no-repeat left center;
-            font-size: 14px;
+            font-size: 13px;
             font-weight: bold;
             color: $secondary-color;
           }
@@ -225,6 +222,7 @@
             font-size: 10px;
             color: $secondary-color;
             line-height: 24px;
+            white-space: nowrap;
           }
         }
 
@@ -240,7 +238,7 @@
 
         &__inner {
           display: flex;
-          margin-top: 12px;
+          margin-top: 2px;
 
           &:first-child {
             margin-top: 0;
@@ -248,14 +246,14 @@
         }
 
         dt {
-          font-size: 14px;
+          font-size: 13px;
           font-weight: bold;
           color: $grey1-color;
           margin-right: 14px;
         }
 
         dd {
-          font-size: 14px;
+          font-size: 13px;
           color: $grey1-color;
         }
       }
@@ -363,7 +361,7 @@
       // Payment Mobile
       .buyinfo-payment-mo {
         @include desktop {
-          // display: none;/
+          // display: none;
         }
 
         &__dim {
