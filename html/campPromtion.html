@@ -280,14 +280,14 @@
             const masterTimeline = gsap.timeline({
               scrollTrigger: {
                 trigger: ".parallax__1st",
-                //pin: true,
+                pin: true,
                 start: "top top",
                 end: "+=100%",
-                //scrub: 1,
+                scrub: 1,
                 onEnter: () => tvcVideo.play(),
                 onLeaveBack: () => {
-                  //tvcVideo.pause();
-                  //tvcVideo.currentTime = 0;
+                  tvcVideo.pause();
+                  tvcVideo.currentTime = 0;
                 },
               }
             });
@@ -307,14 +307,13 @@
               gsap.set(".promotion__head", { marginTop: 0 });
               masterTimeline.to(
                 ".promotion__head",
-                { marginTop: "-30px", ease: "power1.out", duration: 0.2 },
+                { marginTop: "-30px", duration: 0.1 },
                 0
               );
             }
 
-
             masterTimeline
-              .to(".parallax-txt__slogan-1st", { opacity: 1, y: 0, duration: 0.5 }, 0)
+              .to(".parallax-txt__slogan-1st", { opacity: 1, y: 0, duration: 0.5 }, "+=1")
               .to(".parallax-txt__slogan-2nd", { opacity: 1, y: 0, duration: 0.5 }, "+=0.1")
               .to(".parallax-txt__slogan-3rd", { opacity: 1, y: 0, duration: 0.5 }, "+=0.1")
               .to(".parallax-txt__slogan-4th", { opacity: 1, y: 0, duration: 1 }, "+=0.1");
@@ -323,7 +322,7 @@
 
             // --- section parallax-usp ---
             const uspVideo = document.querySelector(".parallax-usp__motion--video");
-            uspVideo.loop = false;
+            uspVideo.loop = true;
             uspVideo.controls = true;
 
             const uspTimeline = gsap.timeline({
@@ -334,7 +333,6 @@
                 end: "+=30%",
                 scrub: 1,
                 onEnter: () => {
-                  uspVideo.loop = true;
                   uspVideo.play();
                 },
                 onLeaveBack: () => {
