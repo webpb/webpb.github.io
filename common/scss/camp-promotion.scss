@@ -37,7 +37,7 @@
           height: 26px;
 
           @include mobile {
-            height: 20px;
+            height: 24px;
           }
         }
       }
@@ -48,7 +48,7 @@
           height: 63px;
 
           @include mobile {
-            height: 50px;
+            height: 47px;
           }
         }
       }
@@ -59,7 +59,7 @@
           height: 26px;
 
           @include mobile {
-            height: 20px;
+            height: 22px;
           }
         }
       }
@@ -68,7 +68,6 @@
     // Parallax
     .parallax {
       width: 100%;
-      margin-bottom: 100px;
 
       &__img {
         width: 100%;
@@ -164,10 +163,10 @@
 
             img {
               width: auto;
-              height: 34px;
+              height: 31px;
 
               @include mobile {
-                height: 25px;
+                height: 24px;
               }
             }
           }
@@ -179,10 +178,10 @@
 
             img {
               width: auto;
-              height: 36px;
+              height: 32px;
 
               @include mobile {
-                height: 27px;
+                height: 25px;
               }
             }
           }
@@ -194,10 +193,10 @@
 
             img {
               width: auto;
-              height: 38px;
+              height: 37px;
 
               @include mobile {
-                height: 28.14px;
+                height: 29px;
               }
             }
           }
@@ -233,18 +232,14 @@
           //   transform: translateY(30px);
           // }
         }
-        &__slogan {
-          width: 100%;
-          padding: 0 80px;
-        }
 
         &__slogan-1st {
           width: 130px;
           height: auto;
 
           @include mobile {
-            width: 122px;
-            margin-top: 100px;
+            width: 123px;
+            margin-top: 121px;
           }
         }
 
@@ -255,8 +250,8 @@
           opacity: 1;
 
           @include mobile {
-            margin-top: 57px;
-            width: 230px;
+            margin-top: 77px;
+            width: 231px;
           }
         }
 
@@ -266,7 +261,7 @@
           margin-top: 66px;
 
           @include mobile {
-            margin-top: 57px;
+            margin-top: 77px;
             width: 195px;
           }
         }
@@ -289,10 +284,12 @@
         flex-direction: column;
         align-items: center;
         text-align: center;
-        height: 40vh;
+        padding-bottom: 166px;
+        // height: 40vh;
 
         @include mobile {
-          height: 50vh;
+          // height: 60vh;
+          padding-bottom: 154px;
         }
 
         &__slogan-up {
@@ -354,7 +351,7 @@
 
           @include mobile {
             width: 226px;
-            margin-top: 75px;
+            margin-top: 115px;
           }
         }
       }
@@ -700,14 +697,9 @@
 
       &__txt2 {
         margin-top: 20px;
-        padding: 0 92px;
-
-        @include mobile {
-          margin-top: 12px;
-        }
 
         img {
-          width: 100%;
+          width: 132px;
         }
       }
 
@@ -722,10 +714,13 @@
 
       &__txt4 {
         margin-top: 20px;
-        padding: 0 92px;
+
+        @include mobile {
+          margin-top: 22px;
+        }
 
         img {
-          width: 100%;
+          width: 132px;
         }
       }
 
@@ -963,11 +958,17 @@
 
           .special-price__footer {
             margin-top: 17px;
-            padding: 0 136px;
 
             @include mobile {
-              margin-top: 20px;
-              padding: 0 130px;
+              margin-top: 21px;
+            }
+
+            img {
+              width: 112px;
+
+              @include mobile {
+                width: 101px;
+              }
             }
           }
         }
@@ -1116,11 +1117,11 @@
 
       &__foot-img {
         margin-top: 15px;
-        padding: 0 30px;
+        width: 320px;
 
         @include mobile {
           margin-top: 21px;
-          padding: 0 30px;
+          width: 300px;
         }
       }
     }

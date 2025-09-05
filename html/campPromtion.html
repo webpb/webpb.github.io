@@ -184,10 +184,6 @@
             <!-- Parallax : TXT -->
             <section class="parallax-txt">
               <div class="parallax-txt__inner">
-                <div class="parallax-txt__slogan">
-                  <img src="/images/campaign/camp25_TXT_img01.png" alt="유산균 보장 균수? 입 속에 넣기 전까지 살아서 보장되는 균수 하지만, 유산균이 보장되어야 할 곳은 장 속">
-                </div>
-                <!--
                 <div class="parallax-txt__slogan-1st">
                   <img src="/images/campaign/camp25_TXT_text01.png" alt="유산균 보장 균수?">
                 </div>
@@ -200,7 +196,6 @@
                 <div class="parallax-txt__slogan-4th">
                   <img src="/images/campaign/camp25_TXT_text04.png" alt="장 속">
                 </div>
-                -->
               </div>
             </section>
             <!--// Parallax : TXT -->
@@ -274,11 +269,23 @@
             tvcVideo.loop = false;
             tvcVideo.controls = true;
 
-            gsap.set(".parallax-tvc__motion--wrap", {
+            // 스케일의 기준점을 우측 상단으로 설정
+            if (window.matchMedia("(max-width: 1100px)").matches) {
+              // Mobile
+              gsap.set(".parallax-tvc__motion--wrap", {
               scale: 0,
               x: "-20px",
-              transformOrigin: "top right" // 스케일의 기준점을 우측 상단으로 설정
-            });
+              transformOrigin: "top right"
+              });
+                
+            } else {
+              // Desktop
+              gsap.set(".parallax-tvc__motion--wrap", {
+              scale: 0,
+              x: "-80px",
+              transformOrigin: "top right"
+              });                
+            }            
 
             const tvcTimeline = gsap.timeline({
               scrollTrigger: {
@@ -302,24 +309,6 @@
               x: 0,
               y: 0,
             }, 0);
-
-            // const txtTimeline = gsap.timeline({
-            //   scrollTrigger: {
-            //     trigger: ".parallax-txt",
-            //     pin: true,
-            //     start: "top top",
-            //     end: "+=40%",
-            //     scrub: 1,
-            //   }
-            // });
-
-            // txtTimeline
-            //   .to(".parallax-txt__slogan-1st", { opacity: 1, y: 0, duration: 0.5 }, 0)
-            //   .to(".parallax-txt__slogan-2nd", { opacity: 1, y: 0, duration: 0.5 }, "+=0.1")
-            //   .to(".parallax-txt__slogan-3rd", { opacity: 1, y: 0, duration: 0.5 }, "+=0.1")
-            //   .to(".parallax-txt__slogan-4th", { opacity: 1, y: 0, duration: 1 }, "+=0.1");
-
-
 
             // --- section parallax-usp ---
             const uspVideo = document.querySelector(".parallax-usp__motion--video");
