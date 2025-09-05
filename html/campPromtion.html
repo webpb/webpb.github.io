@@ -123,7 +123,7 @@
 
     <div class="duo-content">
 
-      <!-- 캠페인 프로모션 2025.08.22~ -->
+      <!-- 캠페인 프로모션 2025.08.22 ~ 09.05 -->
       <link rel="stylesheet" href="/common/css/camp-promotion.css" />
 
       <div id="campPromotion" class="promotion">
@@ -184,6 +184,10 @@
             <!-- Parallax : TXT -->
             <section class="parallax-txt">
               <div class="parallax-txt__inner">
+                <div class="parallax-txt__slogan">
+                  <img src="/images/campaign/camp25_TXT_img01.png" alt="유산균 보장 균수? 입 속에 넣기 전까지 살아서 보장되는 균수 하지만, 유산균이 보장되어야 할 곳은 장 속">
+                </div>
+                <!--
                 <div class="parallax-txt__slogan-1st">
                   <img src="/images/campaign/camp25_TXT_text01.png" alt="유산균 보장 균수?">
                 </div>
@@ -196,6 +200,7 @@
                 <div class="parallax-txt__slogan-4th">
                   <img src="/images/campaign/camp25_TXT_text04.png" alt="장 속">
                 </div>
+                -->
               </div>
             </section>
             <!--// Parallax : TXT -->
@@ -227,11 +232,9 @@
           <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
           <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
-          <!-- 20250903 : 스크립트 수정 -->
+          <!-- 20250905 : 스크립트 수정 -->
           <script>
-            // Anchor Tab Navigation
             $(document).ready(function () {
-              // Smooth scroll to target with 140px offset
               $('.anchor-tab__link').on('click', function (e) {
                 e.preventDefault();
                 const targetId = $(this).attr('href');
@@ -282,7 +285,7 @@
                 trigger: ".parallax-tvc",
                 pin: true,
                 start: "top top",
-                end: "+=100%",
+                end: "+=1%",
                 scrub: 1,
                 onEnter: () => tvcVideo.play(),
                 onLeaveBack: () => {
@@ -300,33 +303,21 @@
               y: 0,
             }, 0);
 
-            // if (window.matchMedia("(max-width: 1100px)").matches) {
-            //   // Mobile
-            // } else {
-            //   // Desktop
-            //   gsap.set(".promotion__head", { marginTop: 0 });
-            //   masterTimeline.to(
-            //     ".promotion__head",
-            //     { marginTop: "-30px", duration: 0.1 },
-            //     0
-            //   );
-            // }
+            // const txtTimeline = gsap.timeline({
+            //   scrollTrigger: {
+            //     trigger: ".parallax-txt",
+            //     pin: true,
+            //     start: "top top",
+            //     end: "+=40%",
+            //     scrub: 1,
+            //   }
+            // });
 
-            const txtTimeline = gsap.timeline({
-              scrollTrigger: {
-                trigger: ".parallax-txt",
-                pin: true,
-                start: "top top",
-                end: "+=40%",
-                scrub: 1,
-              }
-            });
-
-            txtTimeline
-              .to(".parallax-txt__slogan-1st", { opacity: 1, y: 0, duration: 0.5 }, 0)
-              .to(".parallax-txt__slogan-2nd", { opacity: 1, y: 0, duration: 0.5 }, "+=0.1")
-              .to(".parallax-txt__slogan-3rd", { opacity: 1, y: 0, duration: 0.5 }, "+=0.1")
-              .to(".parallax-txt__slogan-4th", { opacity: 1, y: 0, duration: 1 }, "+=0.1");
+            // txtTimeline
+            //   .to(".parallax-txt__slogan-1st", { opacity: 1, y: 0, duration: 0.5 }, 0)
+            //   .to(".parallax-txt__slogan-2nd", { opacity: 1, y: 0, duration: 0.5 }, "+=0.1")
+            //   .to(".parallax-txt__slogan-3rd", { opacity: 1, y: 0, duration: 0.5 }, "+=0.1")
+            //   .to(".parallax-txt__slogan-4th", { opacity: 1, y: 0, duration: 1 }, "+=0.1");
 
 
 
@@ -339,7 +330,7 @@
               scrollTrigger: {
                 trigger: ".parallax-usp",
                 pin: true,
-                start: "top 30%",
+                start: "top 25%",
                 end: "+=30%",
                 scrub: 1,
                 onEnter: () => {
@@ -396,7 +387,7 @@
             });
 
           </script>
-          <!--// 20250903 : 스크립트 수정 -->
+          <!--// 20250905 : 스크립트 수정 -->
           <!--// Parallax Script -->
 
           <!-- 앵커메뉴 -->
@@ -598,6 +589,14 @@
                 <img src="/images/campaign/camp25_special-price_head_img01.png" alt="">
               </div>
               <div class="special-price__content special-price__content--2box">
+                <!-- 20250905 : 마크업 추가 -->
+                <div class="special-price__balloon">
+                  <div class="special-price__balloon-inner">
+                    <img src="/images/campaign/camp25_special-price_balloon02.png" alt="손석구 Pick"
+                      class="special-price__balloon-img">
+                  </div>
+                </div>
+                <!--// 20250905 : 마크업 추가 -->
                 <div class="special-price__head">
                   <img src="/images/campaign/camp25_special-price_img01.png"
                     alt="손석구 Pick! 강한 유산균의 강력한 혜택 2박스 구매시 21% 할인 이벤트 기간 중 상품별 ID당 2개 구매 제한">
@@ -904,7 +903,7 @@
         <!--// 레이어 팝업 스크립트 -->
 
       </div>
-      <!--// 캠페인 프로모션 2025.08.22~ -->
+      <!--// 캠페인 프로모션 2025.08.22 ~ 09.05 -->
 
 
 

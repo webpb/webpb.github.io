@@ -24,7 +24,7 @@
       justify-content: space-between;
       align-items: center;
       padding: 70px 86px 50px 86px;
-      font-family: 'NotoSansKR';
+      font-family: "NotoSansKR";
       font-weight: 500;
 
       @include mobile {
@@ -121,7 +121,6 @@
             padding: 0 20px;
           }
 
-
           &--left {
             width: 100%;
           }
@@ -210,13 +209,11 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        font-family: 'NotoSansKR';
+        font-family: "NotoSansKR";
         font-weight: 500;
         text-align: center;
-        height: 100vh !important;
 
         @include mobile {
-          height: 100vh !important;
           margin-top: 0;
         }
 
@@ -225,11 +222,20 @@
           flex-direction: column;
           align-items: center;
           justify-content: center;
+          padding: 150px 0 123px;
 
-          >div {
-            opacity: 0;
-            transform: translateY(30px);
+          @include mobile {
+            padding: 101px 0 117px;
           }
+
+          // > div {
+          //   opacity: 0;
+          //   transform: translateY(30px);
+          // }
+        }
+        &__slogan {
+          width: 100%;
+          padding: 0 80px;
         }
 
         &__slogan-1st {
@@ -283,10 +289,10 @@
         flex-direction: column;
         align-items: center;
         text-align: center;
-        height: 100vh;
+        height: 40vh;
 
         @include mobile {
-          height: 100vh;
+          height: 50vh;
         }
 
         &__slogan-up {
@@ -408,15 +414,19 @@
           width: 100%;
           height: auto;
 
-          @include mobile {}
+          @include mobile {
+          }
         }
-
       }
 
       &__wrap {
         width: 100%;
         padding: 94px 107px 67px;
-        background: radial-gradient(circle at 50% -40%, #544124, transparent 70%),
+        background: radial-gradient(
+            circle at 50% -40%,
+            #544124,
+            transparent 70%
+          ),
           radial-gradient(circle at 50% 140%, #544124, transparent 70%);
 
         @include mobile {
@@ -445,7 +455,7 @@
         align-items: center;
         margin-top: 27px;
         padding: 18px 20px;
-        background: linear-gradient(to top, #4E3C21, #261D10 50%);
+        background: linear-gradient(to top, #4e3c21, #261d10 50%);
 
         &-img {
           img {
@@ -517,7 +527,6 @@
           padding: 0 50px;
         }
 
-
         &-list {
           display: flex;
           justify-content: center;
@@ -543,27 +552,26 @@
             .quiz__answer-options {
               font-weight: bold;
 
-              +label {
+              + label {
                 font-weight: bold;
               }
             }
-
-
           }
         }
 
         &-options {
           display: none;
 
-          +label {
+          + label {
             display: block;
             padding-left: 22px;
-            background: url('/images/campaign/camp25_quiz_radio_off.svg') no-repeat left center / 14px 14px;
+            background: url("/images/campaign/camp25_quiz_radio_off.svg")
+              no-repeat left center / 14px 14px;
             font-size: 18px;
           }
 
-          &:checked+label {
-            background-image: url('/images/campaign/camp25_quiz_radio_on.svg');
+          &:checked + label {
+            background-image: url("/images/campaign/camp25_quiz_radio_on.svg");
           }
         }
 
@@ -601,7 +609,6 @@
     }
 
     .coupon {
-
       &__inner {
         position: relative;
       }
@@ -645,7 +652,7 @@
         align-items: center;
         margin-top: 18px;
         padding: 31px 40px 39px;
-        background: linear-gradient(to top, #96723F, #97703E 50%);
+        background: linear-gradient(to top, #96723f, #97703e 50%);
 
         @include mobile {
           margin: 18px 14px 0;
@@ -661,7 +668,7 @@
         align-items: center;
         margin-top: 22px;
         padding: 44px 40px 33px;
-        background: linear-gradient(to left top, #725831, #3B2B11 100%);
+        background: linear-gradient(to left top, #725831, #3b2b11 100%);
 
         @include mobile {
           margin: 18px 14px 0;
@@ -785,12 +792,38 @@
         align-items: center;
 
         &--2box {
-          background: linear-gradient(to top, #F6EAD3, #F8F3E6 10%);
+          position: relative;
+          background: linear-gradient(to top, #f6ead3, #f8f3e6 10%);
 
-          padding: 84px 135px 80px;
+          padding: 170px 135px 80px;
 
           @include mobile {
-            padding: 52px 17px 52px;
+            padding: 141px 17px 52px;
+          }
+
+          .special-price__balloon {
+            position: absolute;
+            top: 84px;
+            left: 0;
+            width: 100%;
+            height: auto;
+            text-align: center;
+
+            @include mobile {
+              top: 52px;
+            }
+
+            &-inner {
+              display: inline-block;
+              width: 163px;
+              height: auto;
+              animation: balloonFloat 1s ease-in-out infinite;
+              will-change: transform;
+
+              @include mobile {
+                width: 161px;
+              }
+            }
           }
 
           .special-price__head {
@@ -809,7 +842,7 @@
         }
 
         &--exhbn {
-          background-color: #F8F3E6;
+          background-color: #f8f3e6;
           padding: 109px 125px 46px;
 
           @include mobile {
@@ -827,7 +860,7 @@
           .special-price__list {
             margin-top: 28px;
 
-            >ul {
+            > ul {
               display: flex;
               justify-content: center;
               align-items: center;
@@ -867,7 +900,8 @@
                 font-size: 16px;
                 font-weight: bold;
                 color: $white-color;
-                background: url('/images/campaign/camp25_icon_link.svg') no-repeat right center/26px;
+                background: url("/images/campaign/camp25_icon_link.svg")
+                  no-repeat right center/26px;
               }
             }
           }
@@ -875,7 +909,7 @@
 
         &--half {
           position: relative;
-          background: linear-gradient(to top, #F6EAD3, #F8F3E6 10%);
+          background: linear-gradient(to top, #f6ead3, #f8f3e6 10%);
           padding: 98px 135px 51px;
 
           @include mobile {
@@ -957,7 +991,7 @@
           .special-price__list {
             margin-top: 47px;
 
-            >ul {
+            > ul {
               display: flex;
               justify-content: center;
               align-items: center;
@@ -981,7 +1015,7 @@
         display: flex;
         justify-content: center;
 
-        >ul>li {
+        > ul > li {
           width: 100%;
 
           a {
@@ -993,7 +1027,11 @@
 
       &__present {
         position: relative;
-        background: radial-gradient(circle at 100% 50%, #544124 30%, transparent 90%);
+        background: radial-gradient(
+          circle at 100% 50%,
+          #544124 30%,
+          transparent 90%
+        );
         padding: 88px 135px 50px;
 
         @include mobile {
@@ -1045,7 +1083,11 @@
     .giveaway {
       &__inner {
         position: relative;
-        background: radial-gradient(circle at 50% 10%, #211A0F 20%, transparent 40%);
+        background: radial-gradient(
+          circle at 50% 10%,
+          #211a0f 20%,
+          transparent 40%
+        );
         padding: 86px 137px 51px;
 
         @include mobile {
@@ -1104,14 +1146,14 @@
       &__list {
         margin-top: 10px;
 
-        >li {
+        > li {
           position: relative;
           padding: 0 0 4px 8px;
           font-size: 10px;
           line-height: 140%;
 
           &::before {
-            content: '';
+            content: "";
             position: absolute;
             top: 7px;
             left: 0;
@@ -1195,14 +1237,14 @@
         &--em {
           font-size: 18px;
           font-weight: bold;
-          color: #AF874A;
+          color: #af874a;
         }
 
         &--disc {
           margin-top: 5px;
           font-size: 14px;
           font-weight: bold;
-          color: #AF874A;
+          color: #af874a;
         }
       }
     }
