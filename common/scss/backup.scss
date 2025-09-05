@@ -24,7 +24,7 @@
       justify-content: space-between;
       align-items: center;
       padding: 70px 86px 50px 86px;
-      font-family: 'NotoSansKR';
+      font-family: "NotoSansKR";
       font-weight: 500;
 
       @include mobile {
@@ -121,7 +121,6 @@
             padding: 0 20px;
           }
 
-
           &--left {
             width: 100%;
           }
@@ -171,8 +170,6 @@
                 height: 25px;
               }
             }
-
-
           }
 
           &-center {
@@ -212,7 +209,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        font-family: 'NotoSansKR';
+        font-family: "NotoSansKR";
         font-weight: 500;
         text-align: center;
         margin-top: 120px;
@@ -227,7 +224,7 @@
           align-items: center;
           justify-content: center;
 
-          >div {
+          > div {
             opacity: 0;
             transform: translateY(30px);
           }
@@ -261,12 +258,12 @@
 
           @include mobile {
             margin-top: 40px;
-            width: 195;
+            width: 195px;
           }
         }
 
         &__slogan-4th {
-          width: 61 px;
+          width: 61px;
           height: auto;
           margin-top: 12px;
           margin-bottom: 100px;
@@ -389,7 +386,6 @@
             height: 757px;
           }
         }
-
       }
 
       &__wrap {
@@ -507,7 +503,6 @@
           padding: 0 50px;
         }
 
-
         &-list {
           display: flex;
           justify-content: center;
@@ -529,27 +524,26 @@
             .quiz__answer-options {
               font-weight: bold;
 
-              +label {
+              + label {
                 font-weight: bold;
               }
             }
-
-
           }
         }
 
         &-options {
           display: none;
 
-          +label {
+          + label {
             display: block;
             padding-left: 22px;
-            background: url('/images/campaign/camp25_quiz_radio_off.svg') no-repeat left center / 14px 14px;
+            background: url("/images/campaign/camp25_quiz_radio_off.svg")
+              no-repeat left center / 14px 14px;
             font-size: 18px;
           }
 
-          &:checked+label {
-            background-image: url('/images/campaign/camp25_quiz_radio_on.svg');
+          &:checked + label {
+            background-image: url("/images/campaign/camp25_quiz_radio_on.svg");
           }
         }
 
@@ -588,7 +582,6 @@
     }
 
     .coupon {
-
       &__inner {
         position: relative;
 
@@ -777,7 +770,7 @@
           .special-price__list {
             margin-top: 47px;
 
-            >ul {
+            > ul {
               display: flex;
               justify-content: center;
               align-items: center;
@@ -798,7 +791,7 @@
         justify-content: center;
         margin-top: 30px;
 
-        >ul>li {
+        > ul > li {
           width: 356px;
         }
       }
@@ -885,14 +878,14 @@
       &__list {
         margin-top: 10px;
 
-        >li {
+        > li {
           position: relative;
           padding: 0 0 4px 8px;
           font-size: 10px;
           line-height: 140%;
 
           &::before {
-            content: '';
+            content: "";
             position: absolute;
             top: 7px;
             left: 0;
@@ -972,7 +965,7 @@
         &--em {
           font-size: 18px;
           font-weight: bold;
-          color: #AF874A;
+          color: #af874a;
         }
 
         &--disc {
@@ -980,7 +973,7 @@
           font-size: 14px;
           font-weight: bold;
           font-weight: bold;
-          color: #AF874A;
+          color: #af874a;
         }
       }
     }

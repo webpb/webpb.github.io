@@ -237,11 +237,11 @@
 @media (max-width: 1100px) {
   #campPromotion .promotion__inner .parallax-txt__slogan-3rd {
     margin-top: 40px;
-    width: 195;
+    width: 195px;
   }
 }
 #campPromotion .promotion__inner .parallax-txt__slogan-4th {
-  width: 61 px;
+  width: 61px;
   height: auto;
   margin-top: 12px;
   margin-bottom: 100px;
@@ -857,14 +857,14 @@
 #campPromotion .promotion__popup--content .popup__body--em {
   font-size: 18px;
   font-weight: bold;
-  color: #AF874A;
+  color: #af874a;
 }
 #campPromotion .promotion__popup--content .popup__body--disc {
   margin-top: 5px;
   font-size: 14px;
   font-weight: bold;
   font-weight: bold;
-  color: #AF874A;
+  color: #af874a;
 }
 #campPromotion .promotion__popup--btn {
   display: flex;
