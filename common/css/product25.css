@@ -1283,7 +1283,7 @@
   z-index: 1;
 }
 #pd25Review .review-popup__navi--prev.swiper-button-disabled {
-  opacity: 0.5;
+  display: none;
 }
 #pd25Review .review-popup__navi--next {
   padding: 10px 28px 10px 20px;
@@ -1294,7 +1294,7 @@
   z-index: 1;
 }
 #pd25Review .review-popup__navi--next.swiper-button-disabled {
-  opacity: 0.3;
+  display: none;
 }
 
 #pd25Qna .qna-inner {

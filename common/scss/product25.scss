@@ -1473,7 +1473,7 @@
         z-index: 1;
 
         &.swiper-button-disabled {
-          opacity: 0.5;
+          display: none;
         }
       }
 
@@ -1487,7 +1487,7 @@
         z-index: 1;
 
         &.swiper-button-disabled {
-          opacity: 0.3;
+          display: none;
         }
       }
     }
