@@ -108,7 +108,8 @@
             font-size: 15px;
             color: $grey2-color;
             padding-right: 20px;
-            background: url("/images/common/icon_category.svg") no-repeat right center;
+            background: url("/images/common/icon_category.svg") no-repeat right
+              center;
 
             @include mobile {
               font-size: 13px;
@@ -120,7 +121,8 @@
           display: block;
           width: 20px;
           height: 20px;
-          background: url("/images/common/icon_share.svg") no-repeat center center;
+          background: url("/images/common/icon_share.svg") no-repeat center
+            center;
           font-size: 0;
           text-indent: -20000px;
         }
@@ -207,7 +209,8 @@
             align-items: center;
             padding-left: 28px;
             height: 24px;
-            background: url("/images/common/icon_coupon.svg") no-repeat left center;
+            background: url("/images/common/icon_coupon.svg") no-repeat left
+              center;
             font-size: 13px;
             font-weight: bold;
             color: $secondary-color;
@@ -217,7 +220,8 @@
             height: 24px;
             padding: 0 20px 0 6px;
             border-radius: 4px;
-            background: url("/images/common/icon_coupon_down.svg") no-repeat right 6px center / 14px;
+            background: url("/images/common/icon_coupon_down.svg") no-repeat
+              right 6px center / 14px;
             background-color: rgba(57, 50, 128, 0.1);
             font-size: 10px;
             color: $secondary-color;
@@ -301,7 +305,8 @@
         &__minus {
           width: 36px;
           height: 36px;
-          background: url("/images/common/icon_quantity_minus.svg") no-repeat center / 16px;
+          background: url("/images/common/icon_quantity_minus.svg") no-repeat
+            center / 16px;
           font-size: 0;
           text-indent: -20000px;
         }
@@ -309,7 +314,8 @@
         &__plus {
           width: 36px;
           height: 36px;
-          background: url("/images/common/icon_quantity_plus.svg") no-repeat center / 16px;
+          background: url("/images/common/icon_quantity_plus.svg") no-repeat
+            center / 16px;
           font-size: 0;
           text-indent: -20000px;
         }
@@ -471,7 +477,8 @@
         &__minus {
           width: 34px;
           height: 34px;
-          background: url("/images/common/icon_quantity_minus.svg") no-repeat center / 16px;
+          background: url("/images/common/icon_quantity_minus.svg") no-repeat
+            center / 16px;
           font-size: 0;
           text-indent: -20000px;
         }
@@ -479,7 +486,8 @@
         &__plus {
           width: 34px;
           height: 34px;
-          background: url("/images/common/icon_quantity_plus.svg") no-repeat center / 16px;
+          background: url("/images/common/icon_quantity_plus.svg") no-repeat
+            center / 16px;
           font-size: 0;
           text-indent: -20000px;
         }
@@ -621,6 +629,7 @@
         dt {
           display: -webkit-box;
           -webkit-line-clamp: 3;
+          line-clamp: 3;
           -webkit-box-orient: vertical;
           overflow: hidden;
           text-overflow: ellipsis;
@@ -679,8 +688,7 @@
     }
 
     li {
-
-      // margin-left: 36px;      
+      // margin-left: 36px;
       &:first-child {
         margin-left: 0;
       }
@@ -797,7 +805,8 @@
             display: inline-block;
             width: 20px;
             height: 44px;
-            background: url("/images/common/icon_more.svg") no-repeat center center / 20px;
+            background: url("/images/common/icon_more.svg") no-repeat center
+              center / 20px;
           }
         }
       }
@@ -877,6 +886,7 @@
         dt {
           display: -webkit-box;
           -webkit-line-clamp: 3;
+          line-clamp: 3;
           -webkit-box-orient: vertical;
           overflow: hidden;
           text-overflow: ellipsis;
@@ -940,7 +950,8 @@
           li {
             width: 20px;
             height: 20px;
-            background: url("/images/common/icon_rating_off.svg") no-repeat center center / 20px;
+            background: url("/images/common/icon_rating_off.svg") no-repeat
+              center center / 20px;
 
             &.on {
               background-image: url("/images/common/icon_rating_on.svg");
@@ -1062,7 +1073,7 @@
       &__items {
         margin-top: 12px;
 
-        >ul>li {
+        > ul > li {
           padding: 13px 20px;
           border-bottom: $grey3-color 1px solid;
 
@@ -1089,7 +1100,8 @@
           li {
             width: 16px;
             height: 16px;
-            background: url("/images/common/icon_rating_off.svg") no-repeat center center / 16px;
+            background: url("/images/common/icon_rating_off.svg") no-repeat
+              center center / 16px;
 
             &.on {
               background-image: url("/images/common/icon_rating_on.svg");
@@ -1124,6 +1136,7 @@
             overflow: hidden;
             text-overflow: ellipsis;
             -webkit-line-clamp: 2;
+            line-clamp: 2;
             -webkit-box-orient: vertical;
             white-space: nowrap;
             word-wrap: break-word;
@@ -1235,7 +1248,6 @@
       display: flex;
       flex-direction: column;
       height: 100%;
-
     }
 
     &.single {
@@ -1302,7 +1314,7 @@
         padding: 0 20px;
       }
 
-      >ul {
+      > ul {
         display: flex;
         flex-wrap: wrap;
         gap: 4px;
@@ -1311,7 +1323,7 @@
           gap: 4px;
         }
 
-        >li {
+        > li {
           width: calc((100% - 24px) / 6);
           height: auto;
 
@@ -1412,7 +1424,8 @@
             li {
               width: 16px;
               height: 16px;
-              background: url("/images/common/icon_rating_off.svg") no-repeat center center / 16px;
+              background: url("/images/common/icon_rating_off.svg") no-repeat
+                center center / 16px;
 
               &.on {
                 background-image: url("/images/common/icon_rating_on.svg");
@@ -1452,7 +1465,8 @@
 
       &--prev {
         padding: 10px 20px 10px 28px;
-        background: url(/images/common/icon_paging_prev.svg) no-repeat left 8px center/16px;
+        background: url(/images/common/icon_paging_prev.svg) no-repeat left 8px
+          center/16px;
         font-size: 16px;
         color: $primary-color;
         cursor: pointer;
@@ -1465,7 +1479,8 @@
 
       &--next {
         padding: 10px 28px 10px 20px;
-        background: url(/images/common/icon_paging_next.svg) no-repeat right 8px center/16px;
+        background: url(/images/common/icon_paging_next.svg) no-repeat right 8px
+          center/16px;
         font-size: 16px;
         color: $primary-color;
         cursor: pointer;
@@ -1515,14 +1530,15 @@
             right: 0;
             width: 20px;
             height: 20px;
-            background: url(/images/common/icon_link.svg) no-repeat center / 100%;
+            background: url(/images/common/icon_link.svg) no-repeat center /
+              100%;
           }
         }
       }
     }
 
     .qna-list {
-      >ul>li {
+      > ul > li {
         padding: 8px 20px;
         border-bottom: $grey3-color 1px solid;
 
@@ -1568,18 +1584,21 @@
           left: 0;
           width: 13px;
           height: 14px;
-          background: url(/images/common/icon_qna_question_title.svg) no-repeat center/100%;
+          background: url(/images/common/icon_qna_question_title.svg) no-repeat
+            center/100%;
         }
 
         &.lock {
           .qna-list__lock {
-            background: url(/images/common/icon_post_lock.svg) no-repeat center/100%;
+            background: url(/images/common/icon_post_lock.svg) no-repeat
+              center/100%;
           }
         }
 
         &.unlock {
           .qna-list__lock {
-            background: url(/images/common/icon_post_unlock.svg) no-repeat center/100%;
+            background: url(/images/common/icon_post_unlock.svg) no-repeat
+              center/100%;
           }
         }
 
@@ -1636,7 +1655,8 @@
           left: 0;
           width: 13px;
           height: 14px;
-          background: url(/images/common/icon_qna_question_inner.svg) no-repeat center/100%;
+          background: url(/images/common/icon_qna_question_inner.svg) no-repeat
+            center/100%;
         }
       }
 
@@ -1659,7 +1679,8 @@
           left: 0;
           width: 13px;
           height: 14px;
-          background: url(/images/common/icon_qna_answer_inner.svg) no-repeat center/100%;
+          background: url(/images/common/icon_qna_answer_inner.svg) no-repeat
+            center/100%;
         }
       }
     }
@@ -1693,12 +1714,14 @@
         display: block;
         width: 20px;
         height: 20px;
-        background: url(/images/common/icon_accordion.svg) no-repeat right center/20px;
+        background: url(/images/common/icon_accordion.svg) no-repeat right
+          center/20px;
         font-size: 0;
         text-indent: -20000px;
 
         &.close {
-          background: url(/images/common/icon_accordion.svg) no-repeat right center/20px;
+          background: url(/images/common/icon_accordion.svg) no-repeat right
+            center/20px;
           transform: scaleY(-1);
         }
       }
@@ -1741,12 +1764,14 @@
         display: block;
         width: 40px;
         height: 20px;
-        background: url(/images/common/icon_accordion.svg) no-repeat right center/20px;
+        background: url(/images/common/icon_accordion.svg) no-repeat right
+          center/20px;
         font-size: 0;
         text-indent: -20000px;
 
         &.close {
-          background: url(/images/common/icon_accordion.svg) no-repeat right center/20px;
+          background: url(/images/common/icon_accordion.svg) no-repeat right
+            center/20px;
           transform: scaleY(-1);
         }
       }
@@ -1813,19 +1838,18 @@
 // 공통
 #pd25Wrap {
   #pd25Container {
-
     // 페이징
     .common-paging {
       &__wrap {
         margin-top: 20px;
         text-align: center;
 
-        >ol {
+        > ol {
           display: flex;
           justify-content: center;
           align-items: center;
 
-          >li {
+          > li {
             display: flex;
 
             a,

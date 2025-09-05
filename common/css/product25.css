@@ -544,6 +544,7 @@
 #pd25Relate .relate-inner .relate-swiper__txt dt {
   display: -webkit-box;
   -webkit-line-clamp: 3;
+  line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -766,6 +767,7 @@
 #pd25Recommend .recommend-inner .recommend-swiper__txt dt {
   display: -webkit-box;
   -webkit-line-clamp: 3;
+  line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -976,6 +978,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   -webkit-line-clamp: 2;
+  line-clamp: 2;
   -webkit-box-orient: vertical;
   white-space: nowrap;
   word-wrap: break-word;
